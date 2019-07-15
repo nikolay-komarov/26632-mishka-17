@@ -7,7 +7,7 @@
   <body>
 
     <header class="page-header">
-      <a href="#" class="page-header__logo">
+      <a href="index.html" class="page-header__logo">
         <img class="page-header__logo-img" src="http://placehold.it/260x80" width="260" height="80" alt="Мишка - интенет-магазин вещиц для дома">
       </a>
       <nav class="main-nav">
@@ -15,10 +15,10 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a href="#">Каталог товаров</a>
+              <a href="catalog.html">Каталог товаров</a>
             </li>
             <li class="site-list__item">
-              <a href="#">Вязание на заказ</a>
+              <a>Вязание на заказ</a>
             </li>
             <li class="site-list__item site-list__item--search">
               <a href="#">Поиск по сайту</a>
@@ -40,7 +40,74 @@
           Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
         </p>
 
-        <!-- здесь будут поля формы -->
+        <!-- поля формы -->
+        <h3 class="order-form__header-group">Тип</h3>
+        <span class="order-form__header-group-line"></span>
+        <label class="order-form__type-name">
+          <input class="order-from__type-input" type="radio" name="order-form-type" value="type-accessory" checked>Аксессуар для интерьера
+        </label>
+        <label class="order-form__type-name">
+          <input class="order-from__type-input" type="radio" name="order-form-type" value="type-toy">Детская игрушка
+        </label>
+
+        <h3 class="order-form__header-group">Цвет</h3>
+        <span class="order-form__header-group-line"></span>
+        <label class="order-form__color-item-name">
+          <input class="order-form__color-item-input" type="checkbox" name="order-form-color-white" value="color-white" checked>
+          Белый
+        </label>
+        <label class="order-form__color-item-name">
+          <input class="order-form__color-item-input" type="checkbox" name="order-form-color-gray" value="color-gray" checked>
+          Серый
+        </label>
+        <label class="order-form__color-item-name">
+          <input class="order-form__color-item-input" type="checkbox" name="order-form-color-tiffany" value="color-tiffany">
+          &laquo;Тиффани&raquo;
+        </label>
+        <label class="order-form__color-item-name">
+          <input class="order-form__color-item-input" type="checkbox" name="order-form-color-black" value="color-black">
+          Черный
+        </label>
+        <label class="order-form__color-item-name">
+          <input class="order-form__color-item-input" type="checkbox" name="order-form-color-pink" value="color-pink">
+          Розовый
+        </label>
+        <label class="order-form__color-item-name">
+          <input class="order-form__color-item-input" type="checkbox" name="order-form-color-orange" value="color-orange">
+          Оранжевый
+        </label>
+
+        <h3 class="order-form__header-group">ФИО</h3>
+        <span class="order-form__header-group-line"></span>
+        <label class="order-form__user-label">Имя:
+          <input class="order-form__input" type="text" placeholder="Введите ваше имя*" name="order-form-user-name">
+        </label>
+        <label class="order-form__user-label">Фамилия:
+          <input class="order-form__input" type="text" placeholder="Укажите фамилию*" name="order-form-user-family">
+        </label>
+        <label class="order-form__user-label">Отчество:
+          <input class="order-form__input" type="text" placeholder="Отчество, если желаете" name="order-form-user-patronymic">
+        </label>
+
+        <h3 class="order-form__header-group">Тел</h3>
+        <span class="order-form__header-group-line"></span>
+        <label class="order-form__user-label">
+          <input class="order-form__input order-form__input--phone" type="text" placeholder="+7 XXX XXX XX XX*" name="order-form-user-phone">
+        </label>
+
+        <h3 class="order-form__header-group">e-mail</h3>
+        <span class="order-form__header-group-line"></span>
+        <label class="order-form__user-label">
+          <input class="order-form__input order-form__input--email" type="text" placeholder="Ваш Email*" name="order-form-user-email">
+        </label>
+
+        <h3 class="order-form__header-group">Доп</h3>
+        <span class="order-form__header-group-line"></span>
+        <textarea class="order-form__input order-form__input--description" rows="10" placeholder="Опишите все ваши пожелания к заказу" name="order-form-user-description"></textarea>
+
+        <span class="order-form__footnote"><sup>*</sup>Поля обязательны для заполнения</span>
+
+        <button class="order-form__submit button" type="submit" >Отправить заказ</button>
 
       </form>
     </main>
