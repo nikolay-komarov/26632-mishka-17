@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
@@ -78,7 +79,6 @@
         </label>
 
         <h3 class="order-form__header-group">ФИО</h3>
-        <span class="order-form__header-group-line"></span>
         <label class="order-form__user-label">Имя:
           <input class="order-form__input" type="text" placeholder="Введите ваше имя*" name="order-form-user-name">
         </label>
@@ -90,19 +90,16 @@
         </label>
 
         <h3 class="order-form__header-group">Тел</h3>
-        <span class="order-form__header-group-line"></span>
         <label class="order-form__user-label">
           <input class="order-form__input order-form__input--phone" type="text" placeholder="+7 XXX XXX XX XX*" name="order-form-user-phone">
         </label>
 
         <h3 class="order-form__header-group">e-mail</h3>
-        <span class="order-form__header-group-line"></span>
         <label class="order-form__user-label">
           <input class="order-form__input order-form__input--email" type="text" placeholder="Ваш Email*" name="order-form-user-email">
         </label>
 
         <h3 class="order-form__header-group">Доп</h3>
-        <span class="order-form__header-group-line"></span>
         <textarea class="order-form__input order-form__input--description" rows="10" placeholder="Опишите все ваши пожелания к заказу" name="order-form-user-description"></textarea>
 
         <span class="order-form__footnote"><sup>*</sup>Поля обязательны для заполнения</span>
@@ -116,19 +113,19 @@
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a href="#" class="social__link social__link--isg">Мишка в Инстаграм</a>
+            <a href="#" class="social__link social__link--isg" aria-label="Мишка в Инстаграм">igm</a>
           </li>
           <li class="social__item">
-            <a href="#" class="social__link social__link--fb">Мишка на Фейсбуке</a>
+            <a href="#" class="social__link social__link--fb" aria-label="Мишка на Фейсбуке">fb</a>
           </li>
           <li class="social__item">
-            <a href="#" class="social__link social__link--tw">Мишка в Твиттере</a>
+            <a href="#" class="social__link social__link--tw" aria-label="Мишка в Твиттере">tw</a>
           </li>
         </ul>
       </div>
       <div class="page-footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">HTML Academy</a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">hA</a>
       </div>
     </footer>
   </body>
