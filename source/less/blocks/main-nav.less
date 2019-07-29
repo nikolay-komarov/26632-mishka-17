@@ -1,8 +1,16 @@
 .main-nav {
-  display: block;
-  width: 320px;
-  margin: 0;
+  display: none; // временно скроем меню
+  flex-direction: column;
+  margin: 0 auto;
   padding: 0;
 
   background-color: @background-color-main;
 }
+
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    display: none; // временно скроем меню
+  }
+}
+
