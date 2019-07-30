@@ -1,11 +1,43 @@
+/* блок */
+
 .about-us {
-  display: block;
-  width: 260px;
+  width: auto;
   margin: 0;
+  padding: 0;
+
+  background-color: #ffffff;
+}
+
+.about-us__wrapper {
+  width: 260px;
+  margin: 0 auto;
   padding: 0 30px;
   padding-top: 30px;
   padding-bottom: 25px;
 }
+
+@media (min-width: @tablet-width) {
+  .about-us__wrapper {
+    width: @tablet-width - 100px;
+    padding: 0 50px;
+    padding-top: 65px;
+    padding-bottom: 85px;
+
+    min-height: 635px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-us__wrapper {
+    width: @desktop-width - 450px;
+    padding: 0 225px;
+    padding-top: 80px;
+    padding-bottom: 90px;
+
+    min-height: 665px;
+  }
+}
+
 
 .about-us__header {
   display: inline-block;
@@ -26,7 +58,7 @@
 
 .about-us__list {
   display: flex;
-  width: 260px;
+  width: 100%;
   margin: 0;
   padding: 0;
   flex-direction: column;
@@ -36,8 +68,21 @@
   list-style: none;
 }
 
+@media (min-width: @tablet-width) {
+  .about-us__list {
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-us__list {
+    flex-wrap: wrap;
+  }
+}
+
 .about-us__item {
   display: inline-block;
+  width: 260px;
   margin: 0;
   padding: 0;
   padding-top: 55px;

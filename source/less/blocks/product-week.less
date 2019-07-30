@@ -1,10 +1,10 @@
 /* блок */
 
 .product-week {
-  width: 320px;
-  margin: 0 auto;
-  padding: 0;
-  padding-bottom: 40px;
+  width: auto;
+  margin: 0;
+
+  background-color: #ffffff;
 }
 
 .product-week__wrapper {
@@ -13,35 +13,28 @@
   width: 260px;
   margin: 0 auto;
   padding: 0 30px;
+  padding-bottom: 40px;
 
   position: relative;
 }
 
 @media (min-width: @tablet-width) {
-  .product-week {
-    width: @tablet-width;
-  }
-
   .product-week__wrapper {
-    display: flex;
-    flex-direction: column;
     width: @tablet-width - 100px;
-    margin: 0 auto;
     padding: 0 50px;
+    padding-bottom: 40px;
+
+    min-width: 630px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .product-week {
-    width: @desktop-width;
-  }
-
   .product-week__wrapper {
-    display: flex;
-    flex-direction: column;
     width: @desktop-width - 100px;
-    margin: 0 auto;
     padding: 0 50px;
+    padding-bottom: 40px;
+
+    min-width: 810px;
   }
 }
 
