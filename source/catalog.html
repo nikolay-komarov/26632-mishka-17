@@ -3,8 +3,47 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
-    <link href="css/normalize.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Подложка для верстки и контуры блоков (временно!) -->
+    <!--
+    <style>
+      /*
+      body {
+        background-color: lightgrey;
+      }
+      */
+      body > * {
+        outline: 2px solid blue;
+      }
+      body > * > * {
+        outline: 2px solid green;
+      }
+      body > * > * > * {
+        outline: 2px solid red;
+      }
+      body > * > * > * > * {
+        outline: 2px solid purple;
+      }
+      body > * > * > * > * > * {
+        outline: 2px solid orangered;
+      }
+      body > * > * > * > * > * > * {
+        outline: 2px solid greenyellow;
+      }
+      body > * > * > * > * > * > * > * {
+        outline: 2px solid lightblue;
+      }
+      body > * > * > * > * > * > * > * > *{
+        outline: 1px dotted red;
+      }
+      body > * > * > * > * > * > * > * > * > * {
+        outline: 1px dotted green;
+      }
+    </style>
+    -->
+
   </head>
   <body>
 
@@ -37,71 +76,78 @@
       <h1 class="page-main__header">Каталог товаров</h1>
 
       <section class="catalog">
-        <h2 class="visually-hidden">Каталог товаров</h2>
-        <ul class="catalog__list">
-          <li class="catalog__item">
-            <img class="catalog__item-img" src="http://placehold.it/260x195" width="260" height="195" alt="Карточка товара">
-            <h3 class="catalog__item-header">Зайчик-попрыгайчик</h3>
-            <p class="catalog__item-description">Рост 30 см, вес 200 г</p>
-            <div class="catalog__to-cart">
-              <span class="catalog__item-price">1 200 руб.</span>
-              <a href="#" class="catalog__to-cart-logo" aria-label="В корзину">cart</a>
-            </div>
-          </li>
-          <li class="catalog__item">
-            <img class="catalog__item-img" src="http://placehold.it/260x195" width="260" height="195" alt="Карточка товара">
-            <h3 class="catalog__item-header">Корзинка для белья</h3>
-            <p class="catalog__item-description">Диаметр 15 см, высота 10 см</p>
-            <div class="catalog__to-cart">
-              <span class="catalog__item-price">690 руб.</span>
-              <a href="#" class="catalog__to-cart-logo" aria-label="В корзину">cart</a>
-            </div>
-          </li>
-          <li class="catalog__item">
-            <img class="catalog__item-img" src="http://placehold.it/260x195" width="260" height="195" alt="Карточка товара">
-            <h3 class="catalog__item-header">Большая корзинка для игрушек</h3>
-            <p class="catalog__item-description">Диаметр 30 см, высота 30 см</p>
-            <div class="catalog__to-cart">
-              <span class="catalog__item-price">1 500 руб.</span>
-              <a href="#" class="catalog__to-cart-logo" aria-label="В корзину">cart</a>
-            </div>
-          </li>
-        </ul>
+        <div class="catalog__wrapper">
+          <h2 class="visually-hidden">Каталог товаров</h2>
+          <ul class="catalog__list">
+            <li class="catalog__item">
+              <img class="catalog__item-img" src="http://placehold.it/260x195" width="260" height="195" alt="Карточка товара">
+              <h3 class="catalog__item-header">Зайчик-попрыгайчик</h3>
+              <p class="catalog__item-description">Рост 30 см, вес 200 г</p>
+              <div class="catalog__to-cart">
+                <span class="catalog__item-price">1 200 руб.</span>
+                <a href="#" class="catalog__to-cart-logo" aria-label="В корзину">cart</a>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <img class="catalog__item-img" src="http://placehold.it/260x195" width="260" height="195" alt="Карточка товара">
+              <h3 class="catalog__item-header">Корзинка для белья</h3>
+              <p class="catalog__item-description">Диаметр 15 см, высота 10 см</p>
+              <div class="catalog__to-cart">
+                <span class="catalog__item-price">690 руб.</span>
+                <a href="#" class="catalog__to-cart-logo" aria-label="В корзину">cart</a>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <img class="catalog__item-img" src="http://placehold.it/260x195" width="260" height="195" alt="Карточка товара">
+              <h3 class="catalog__item-header">Большая корзинка для игрушек</h3>
+              <p class="catalog__item-description">Диаметр 30 см, высота 30 см</p>
+              <div class="catalog__to-cart">
+                <span class="catalog__item-price">1 500 руб.</span>
+                <a href="#" class="catalog__to-cart-logo" aria-label="В корзину">cart</a>
+              </div>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section class="produce-flow">
-        <h2 class="produce-flow__header">Процесс производства</h2>
-        <!-- здесь будет видео -->
         <div class="produce-flow__wrapper">
-          <img class="produce-flow__img" src="http://placehold.it/260x150" width="260" height="150" alt="Процесс производства" >
+          <h2 class="produce-flow__header">Процесс производства</h2>
+          <!-- здесь будет видео -->
+          <div class="produce-flow__img-wrapper">
+            <img class="produce-flow__img" src="http://placehold.it/260x150" width="260" height="150" alt="Процесс производства" >
+          </div>
+          <p class="produce-flow__text">
+            По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+          </p>
+          <a href="#" class="produce-flow__order button">Сделать заказ</a>
         </div>
-        <p class="produce-flow__text">
-          По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
-        </p>
-        <a href="#" class="produce-flow__order button">Сделать заказ</a>
       </section>
 
 
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a href="#" class="social__link social__link--isg" aria-label="Мишка в Инстаграм">igm</a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link social__link--fb" aria-label="Мишка на Фейсбуке">fb</a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link social__link--tw" aria-label="Мишка в Твиттере">tw</a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright copyright">
-        <p class="copyright__text">Разработано</p>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">hA</a>
-      </div>
-    </footer>
-  </body>
+        <div class="page-footer__wrapper">
+          <div class="page-footer__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a href="#" class="social__link social__link--isg" aria-label="Мишка в Инстаграм">igm</a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link social__link--fb" aria-label="Мишка на Фейсбуке">fb</a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link social__link--tw" aria-label="Мишка в Твиттере">tw</a>
+              </li>
+            </ul>
+          </div>
+          <div class="page-footer__copyright copyright">
+            <p class="copyright__text">Разработано</p>
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">hA</a>
+          </div>
+        </div>
+      </footer>
+
+    </body>
 </html>

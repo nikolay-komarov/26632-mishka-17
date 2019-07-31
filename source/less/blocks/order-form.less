@@ -1,12 +1,38 @@
+.order-form__wrapper {
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
 .order-form {
   display: flex;
-  max-width: 260px;
+  width: 260px;
   margin: 0 auto;
   margin-bottom: 60px;
-  padding: 0;
+  padding: 0 30px;
   flex-direction: column;
 
   background-color: @background-color-main;
+}
+
+@media (min-width: @tablet-width) {
+  .order-form {
+    width: @tablet-width;
+    padding: 0;
+    padding-bottom: 50px;
+
+    min-height: 1500px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .order-form {
+    width: @desktop-width;
+    padding: 0;
+    padding-bottom: 50px;
+
+    min-height: 1520px;
+  }
 }
 
 .order-form__text {
