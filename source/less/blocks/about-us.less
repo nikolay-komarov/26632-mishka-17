@@ -22,8 +22,6 @@
     padding: 0 50px;
     padding-top: 65px;
     padding-bottom: 85px;
-
-    min-height: 635px;
   }
 }
 
@@ -33,11 +31,8 @@
     padding: 0 225px;
     padding-top: 80px;
     padding-bottom: 90px;
-
-    min-height: 665px;
   }
 }
-
 
 .about-us__header {
   display: inline-block;
@@ -56,6 +51,26 @@
   background-color: @background-color-main;
 }
 
+@media (min-width: @tablet-width) {
+  .about-us__header {
+    width: 335px;
+    padding-bottom: 55px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-us__header {
+    width: 525px;
+    padding-bottom: 55px;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+
 .about-us__list {
   display: flex;
   width: 100%;
@@ -70,12 +85,8 @@
 
 @media (min-width: @tablet-width) {
   .about-us__list {
-    flex-wrap: wrap;
-  }
-}
+    max-height: 128px * @q-in-column; //высота одного элемента списка * кол-во элементов в столбце
 
-@media (min-width: @desktop-width) {
-  .about-us__list {
     flex-wrap: wrap;
   }
 }
@@ -96,4 +107,19 @@
   color: @header-color;
 
   background-color: @background-color-main;
+}
+
+@media (min-width: @tablet-width) {
+  .about-us__item {
+    width: 335px;
+
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-us__item {
+    width: 350px;
+  }
 }
