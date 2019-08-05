@@ -8,11 +8,11 @@
 
 .catalog__wrapper {
   display: flex;
-  width: 320px;
+  width: 260px;
   margin: 0 auto;
-  padding: 0;
+  padding: 30px;
+
   flex-direction: column;
-  min-height: 405px * 3;
 
   background-color: @background-color-main;
 }
@@ -21,9 +21,8 @@
   .catalog__wrapper {
     width: @tablet-width - 100px;
     padding: 0 50px;
-    padding-bottom: 60px;
-
-    min-height: 1165px;
+    padding-top: 80px;
+    padding-bottom: 55px;
   }
 }
 
@@ -31,9 +30,8 @@
   .catalog__wrapper {
     width: @desktop-width - 100px;
     padding: 0 50px;
-    padding-bottom: 60px;
-
-    min-height: 720px;
+    padding-top: 130px;
+    //padding-bottom: 60px;
   }
 }
 
@@ -41,7 +39,6 @@
   display: flex;
   width: 260px;
   margin: 0 auto;
-  margin-top: 30px;
   padding: 0;
   flex-direction: column;
   justify-content: space-between;
@@ -50,6 +47,26 @@
   background-color: @background-color-main;
 
   list-style: none;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__list {
+    width: @tablet-width - 100px;
+    padding: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__list {
+    width: @desktop-width - 100px;
+    padding: 0;
+
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+  }
 }
 
 .catalog__item {
@@ -63,12 +80,99 @@
   align-items: flex-start;
 }
 
+.catalog__item:last-child {
+  padding-bottom: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__item {
+    width: @tablet-width - 100px;
+    padding: 0;
+    padding-bottom: 30px;
+
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .catalog__item:last-child {
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__item {
+    width: 315px;
+    margin: 0;
+    margin-left: 50px;
+    padding: 0;
+    padding-bottom: 60px;
+
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .catalog__item:nth-child(3n+1) {
+    margin-left: 0;
+  }
+
+  .catalog__item:last-child {
+    padding-bottom: 60px;
+  }
+}
+
+.catalog__item-wrapper {
+  display: flex;
+  padding: 0 30px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__item-wrapper {
+    width: 335px;
+    min-height: 335px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__item-wrapper {
+    width: 255px;
+    min-height: 200px;
+  }
+}
+
+
+/* блок с картикой товара */
+
+.catalog__item-img {
+  width: 260px;
+  height: 195px;
+
+  background-color: #ececec;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__item-img {
+    width: 335px;
+    height: 335px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__item-img {
+    width: 315px;
+    height: 465px;
+  }
+}
+
+/* блок с информацией для карточки товара */
+
 .catalog__item-header {
   display: block;
-  width: 180px;
+  width: 200px;
   margin: 0;
   padding: 0;
-  padding-left: 30px;
   padding-top: 30px;
   padding-bottom: 22px;
 
@@ -82,15 +186,22 @@
   background-color: @background-color-main;
 }
 
-.catalog__item:first-child .catalog__item-header {
-  width: 200px;
+@media (min-width: @tablet-width) {
+  .catalog__item-header {
+    width: 100%;
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
+
+// .catalog__item:first-child .catalog__item-header {
+//   width: 200px;
+// }
 
 .catalog__item-description {
   display: block;
   margin: 0;
   padding: 0;
-  padding-left: 30px;
   padding-bottom: 30px;
 
   font-family: "OpenSans", "Arial", sans-serif;
@@ -103,11 +214,18 @@
   background-color: @background-color-main;
 }
 
+@media (min-width: @tablet-width) {
+  .catalog__item-description {
+    font-size: 15px;
+    line-height: 30px;
+  }
+}
+
 .catalog__to-cart {
   display: flex;
-  width: 200px;
+  width: 100%;
   margin: 0;
-  padding: 0 30px;
+  padding: 0;
   justify-content: space-between;
   align-items: center;
 }
@@ -123,4 +241,11 @@
   color: @header-color;
 
   background-color: @background-color-main;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__item-price {
+    font-size: 15px;
+    line-height: 30px;
+  }
 }
