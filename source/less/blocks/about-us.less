@@ -1,10 +1,37 @@
+/* блок */
+
 .about-us {
-  display: block;
-  width: 260px;
+  width: auto;
   margin: 0;
+  padding: 0;
+
+  background-color: #ffffff;
+}
+
+.about-us__wrapper {
+  width: 260px;
+  margin: 0 auto;
   padding: 0 30px;
   padding-top: 30px;
   padding-bottom: 25px;
+}
+
+@media (min-width: @tablet-width) {
+  .about-us__wrapper {
+    width: @tablet-width - 100px;
+    padding: 0 50px;
+    padding-top: 65px;
+    padding-bottom: 85px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-us__wrapper {
+    width: @desktop-width - 450px;
+    padding: 0 225px;
+    padding-top: 80px;
+    padding-bottom: 90px;
+  }
 }
 
 .about-us__header {
@@ -24,9 +51,29 @@
   background-color: @background-color-main;
 }
 
+@media (min-width: @tablet-width) {
+  .about-us__header {
+    width: 335px;
+    padding-bottom: 55px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-us__header {
+    width: 525px;
+    padding-bottom: 55px;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+
 .about-us__list {
   display: flex;
-  width: 260px;
+  width: 100%;
   margin: 0;
   padding: 0;
   flex-direction: column;
@@ -36,8 +83,41 @@
   list-style: none;
 }
 
+@media (min-width: @tablet-width) {
+  .about-us__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  // устанавливается порядок для элементов списка
+  .about-us__item:nth-child(1) {
+    order: -6;
+  }
+
+  .about-us__item:nth-child(2) {
+    order: -4;
+  }
+
+  .about-us__item:nth-child(3) {
+    order: -2;
+  }
+
+  .about-us__item:nth-child(4) {
+    order: -5;
+  }
+
+  .about-us__item:nth-child(5) {
+    order: -3;
+  }
+
+  .about-us__item:nth-child(6) {
+    order: -1;
+  }
+}
+
 .about-us__item {
   display: inline-block;
+  width: 260px;
   margin: 0;
   padding: 0;
   padding-top: 55px;
@@ -51,4 +131,19 @@
   color: @header-color;
 
   background-color: @background-color-main;
+}
+
+@media (min-width: @tablet-width) {
+  .about-us__item {
+    width: 333px;
+
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-us__item {
+    width: 350px;
+  }
 }

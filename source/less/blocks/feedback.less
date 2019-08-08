@@ -1,14 +1,80 @@
 .feedback {
-  display: block;
-  width: 260px;
+  width: auto;
   margin: 0;
-  padding: 0 30px;
-  padding-bottom: 40px;
+  padding: 0;
+
+  background-color: #ffffff;
 }
+
+.feedback__wrapper {
+  width: 260px;
+  margin: 0 auto;
+  padding: 0 30px;
+  padding-top: 40px;
+  padding-bottom: 55px;
+
+  background: transparent;
+}
+
+.feedback__inner-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  background: transparent;
+}
+
+@media (min-width: @tablet-width) {
+  .feedback__wrapper {
+    width: @tablet-width - 100px;
+    padding: 0 50px;
+    padding-top: 95px;
+    padding-bottom: 140px;
+
+    // временно
+    background-image: url("../../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: left 0 top 0;
+  }
+
+  .feedback__inner-wrapper {
+    flex-direction: row;
+
+    position: relative;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .feedback__wrapper {
+    width: @desktop-width - 100px;
+    padding: 0 50px;
+    padding-top: 80px;
+    padding-bottom: 195px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .feedback__content-wrapper {
+    width: 668px;
+  }
+
+  .feedback__action-wrapper {
+    position: absolute;
+    right: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .feedback__content-wrapper {
+    width: 1050px;
+    padding-left: 175px;
+  }
+}
+
+
+/* блок с отзывом */
 
 .feedback__header {
   display: inline-block;
-  width: 260px;
   margin: 0;
   padding: 0;
   padding-bottom: 25px;
@@ -20,25 +86,28 @@
 
   color: @header-color;
 
-  background-color: @background-color-main;
+  background: transparent;
 }
 
 .feedback__list {
   display: block;
-  width: 260px;
+  width: 100%;
   margin: 0;
   padding: 0;
 
-  background-color: @background-color-main;
+  background: transparent;
 
   list-style: none;
 }
 
 .feedback__item {
   display: flex;
+  width: 100%;
   margin: 0;
   padding: 0;
   flex-direction: column;
+
+  background: transparent;
 }
 
 .feedback__text {
@@ -54,13 +123,14 @@
 
   color: @main-text-color;
 
-  background-color: @background-color-main;
+  background: transparent;
 }
 
 .feedback__user-name {
   display: block;
   margin: 0;
   padding: 0;
+  padding-bottom: 20px;
 
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 17px;
@@ -69,7 +139,7 @@
 
   color: @header-color;
 
-  background-color: @background-color-main;
+  background: transparent;
 }
 
 .feedback__user {
@@ -81,5 +151,83 @@
 
   color: @main-text-color;
 
-  background-color: @background-color-main;
+  background: transparent;
+}
+
+
+@media (min-width: @tablet-width) {
+  .feedback__header {
+    padding-bottom: 50px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .feedback__text {
+    padding-bottom: 75px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .feedback__user-name {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .feedback__user {
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .feedback__header {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .feedback__text {
+    padding-bottom: 55px;
+  }
+}
+
+
+/* блок кнопок вперед-назад и написать */
+
+.feedback__action-wrapper {
+  display: flex;
+  width: 260px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.feedback__action-btn-wrapper {
+  order: 0;
+}
+
+.feedback__write-us {
+  order: 1;
+  width: 260px;
+}
+
+
+@media (min-width: @tablet-width) {
+  .feedback__action-wrapper {
+    width: 175px;
+    position: absolute;
+    right: 0;
+
+    height: 100%;
+  }
+
+  .feedback__action-btn-wrapper {
+    order: 1;
+  }
+
+  .feedback__write-us {
+    width: 175px;
+
+    order: 0;
+  }
 }

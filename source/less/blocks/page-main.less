@@ -1,16 +1,13 @@
 .page-main {
-  display: block;
-  width: 320px;
-  margin: 0;
-  padding: 0;
+  //display: block;
+  //margin: 0 auto;
+  //padding: 0;
 
   background-color: @background-color-main;
 }
 
 .page-main__header {
-  display: block;
-  width: 320px;
-  margin: 0;
+  margin: 0 auto;
   padding: 75px 0;
 
   text-align: center;
@@ -25,6 +22,26 @@
   background-color: @background-color-page-header;
 }
 
-.page-main-catalog {
-  padding-bottom: 60px;
+// .page-main-catalog {
+//   padding-bottom: 60px;
+// }
+
+@media (min-width: @tablet-width) {
+  .page-main__header {
+    padding-top: 115px;
+    padding-bottom: 90px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main__header {
+    padding-top: 115px;
+    padding-bottom: 115px;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
 }

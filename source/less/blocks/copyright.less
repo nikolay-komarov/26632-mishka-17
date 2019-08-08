@@ -9,8 +9,17 @@
   background-color: @background-color-footer;
 }
 
+@media (min-width: @tablet-width) {
+  .copyright {
+    width: 180px; // сопоствить с логотипом в футере
+    margin: 0;
+    padding: 0;
+    padding-right: 50px;
+  }
+}
+
 .copyright__text {
-  display: inline-block;
+  display: block;
 
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 19px;
