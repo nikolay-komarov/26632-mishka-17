@@ -27,26 +27,38 @@
 @media (min-width: @tablet-width) {
   .page-header__wrapper {
     width: @tablet-width - 100px;
+    min-height: 90px; // временно: min-height -> height
     padding: 0 50px;
 
     // временно
     flex-direction: row;
-    justify-content: space-between;
+    // justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-
-    min-height: 90px;
   }
 
   .page-header__logo {
+    width: 113px;
     height: 90px;
     margin: 0;
+    margin-right: 320px - 113px;
     padding: 0;
+
+    line-height: 0;
+  }
+
+  .page-header__logo-img {
+    width: 113px;
+    height: 90px;
+
+    background-color: @background-color-main;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header__wrapper {
     width: @desktop-width - 100px;
+    min-height: 90px; // временно
     padding: 0 50px;
 
     // временно
@@ -54,12 +66,26 @@
     justify-content: space-between;
     align-items: center;
 
-    min-height: 90px;
+    position: relative;
   }
 
   .page-header__logo {
+    width: 149px;
     height: 90px;
     margin: 0;
     padding: 0;
+
+    line-height: 0;
+
+    position: absolute;
+    top: 0;
+    left: @desktop-width / 2 - (149px / 2);
+  }
+
+  .page-header__logo-img {
+    width: 149px;
+    height: 90px;
+
+    background-color: @background-color-main;
   }
 }

@@ -123,6 +123,7 @@
 @media (min-width: @desktop-width) {
   .contacts__list {
     padding: 0;
+    padding-bottom: 60px; // чтобы кнопка на текст не заезжала
     flex-direction: column;
     justify-content: flex-start;
   }
@@ -206,7 +207,11 @@
 .contacts__map {
   display: flex;
   line-height: 0;
-  width: auto; //временно
+  width: 320px;
+}
+
+.contacts__map-img {
+  width: 320px;
 }
 
 @media (min-width: @tablet-width) {
@@ -217,6 +222,25 @@
 
     align-items: center;
     justify-content: center;
+  }
+
+  .contacts__map-img {
+    width: 768px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts__map {
+    width: 525px;
+
+    background-color: #f4e9d7;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contacts__map-img {
+    width: 525px;
   }
 }
 
