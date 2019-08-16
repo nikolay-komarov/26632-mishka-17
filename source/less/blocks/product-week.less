@@ -120,6 +120,7 @@
     position: absolute;
     top: 70px + 70px;
     left: 50px;
+    z-index: 1;
 
     justify-content: flex-start;
   }
@@ -159,6 +160,7 @@
   position: absolute;
   //left: 50%;
   bottom: 125px;
+  width: 260px;
 }
 
 @media (min-width: @tablet-width) {
@@ -167,11 +169,25 @@
   }
 
   .product-week__img {
-    position: relative;
+    position: absolute;
     bottom: 0;
+    right: 0;
     align-self: flex-end;
+    width: 333px;
+    height: auto;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .product-week__img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    align-self: flex-end;
+    width: 525px;
+  }
+}
+
 
 
 /* контент-блок */
