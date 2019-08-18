@@ -16,6 +16,8 @@
   margin: 0;
   padding: 0;
 
+  position: relative;
+
   background-color: @background-color-main;
 
   a {
@@ -37,6 +39,26 @@
       margin: 0;
       padding: 0;
     }
+  }
+}
+
+.site-list__item--search {
+  svg {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+
+    opacity: 0.2;
+  }
+}
+
+.site-list__item--cart {
+  svg {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+
+    opacity: 0.2;
   }
 }
 
@@ -84,6 +106,11 @@
       p {
         display: none;
       }
+
+      svg {
+        top: 37px;
+        left: 33px;
+      }
     }
   }
 
@@ -102,6 +129,11 @@
       margin: 0;
       padding: 33px 0;
       padding-left: 82px;
+
+      svg {
+        top: 35px;
+        left: 31px;
+      }
     }
   }
 
