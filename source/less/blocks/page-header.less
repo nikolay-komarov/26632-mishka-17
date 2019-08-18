@@ -11,15 +11,29 @@
 }
 
 .page-header__logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   height: 80px;
   margin: 0 auto;
   padding: 0;
 
+  align-items: center;
+
   line-height: 0;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-header__logo-img {
-  height: 80px;
+  height: 35px;
 
   background-color: @background-color-main;
 }
