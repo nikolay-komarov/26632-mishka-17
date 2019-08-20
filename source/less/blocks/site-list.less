@@ -11,18 +11,20 @@
 }
 
 .site-list__item {
-  display: inline-block;
+  display: block;
   width: 320px;
   margin: 0;
   padding: 0;
 
+  position: relative;
+
   background-color: @background-color-main;
 
   a {
-    display: inline-block;
+    display: block;
     width: 230px;
     margin: 0;
-    padding: 27px 30px;
+    padding: 28px 30px;
     padding-left: 60px;
 
     font-family: "OpenSans", "Arial", sans-serif;
@@ -32,5 +34,380 @@
     color: @header-color;
 
     text-decoration: none;
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.site-list__item--search {
+  svg {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+
+    opacity: 0.2;
+  }
+}
+
+.site-list__item--cart {
+  svg {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+
+    opacity: 0.2;
+  }
+}
+
+.site-list__item--delivery,
+.site-list__item--new,
+.site-list__item--sale {
+  display: none;
+}
+
+
+// Tablet
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    width: 768px - 100px;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    background-color: transparent;
+  }
+
+  .site-list__item {
+    background-color: transparent;
+  }
+
+  .site-list__item--search {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    margin-left: 320px;
+
+    order: -5;
+
+    background-color: @background-color-main;
+
+    a {
+      display: block;
+      width: 0;
+      min-height: 90px;
+      margin: 0;
+      padding: 0;
+      padding-left: 83px;
+
+      p {
+        display: none;
+      }
+
+      svg {
+        top: 37px;
+        left: 33px;
+      }
+    }
+  }
+
+  .site-list__item--cart {
+    width: auto;
+    margin: 0;
+    padding: 0;
+
+    order: -4;
+
+    background-color: @background-color-main;
+
+    a {
+      display: block;
+      width: 264px - 82px;
+      margin: 0;
+      padding: 33px 0;
+      padding-left: 82px;
+
+      svg {
+        top: 35px;
+        left: 31px;
+      }
+    }
+  }
+
+  .site-list__item--catalog {
+    width: auto;
+    margin: 0;
+    padding: 0;
+
+    order: -3;
+
+    a {
+      display: block;
+      width: 167px;
+      margin: 0;
+      padding: 33px 0;
+
+      font-family: "OpenSans", "Arial", sans-serif;
+      font-size: 15px;
+      line-height: 24px;
+      font-weight: 700;
+      color: @header-color;
+
+      text-decoration: none;
+    }
+  }
+
+  .site-list__item--order {
+    width: auto;
+    margin: 0;
+    padding: 0;
+
+    order: -2;
+
+    a {
+      display: block;
+      width: 167px;
+      margin: 0;
+      padding: 33px 0;
+
+      font-family: "OpenSans", "Arial", sans-serif;
+      font-size: 15px;
+      line-height: 24px;
+      font-weight: 700;
+      color: @header-color;
+
+      text-decoration: none;
+    }
+  }
+
+  .site-list__item--delivery {
+    display: block;
+    width: auto;
+    margin: 0;
+    padding: 0;
+
+    order: -1;
+
+    a {
+      display: block;
+      width: 334px;
+      margin: 0;
+      padding: 33px 0;
+
+      font-family: "OpenSans", "Arial", sans-serif;
+      font-size: 15px;
+      line-height: 24px;
+      font-weight: 400;
+      color: @header-color;
+
+      text-decoration: none;
+
+      p {
+        text-align: right;
+      }
+    }
+  }
+}
+
+
+// Desktop
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    width: 1150px - 100px;
+  }
+
+  .site-list__item--catalog {
+    width: auto;
+    margin: 0;
+    padding: 0;
+
+    order: -7;
+
+    background-color: @background-color-main;
+
+    a {
+      display: block;
+      width: 175px;
+      margin: 0;
+      padding: 33px 0;
+
+      font-family: "OpenSans", "Arial", sans-serif;
+      font-size: 17px;
+      line-height: 24px;
+      font-weight: 700;
+      color: @header-color;
+
+      text-decoration: none;
+    }
+  }
+
+  .site-list__item--order {
+    width: auto;
+    margin: 0;
+    padding: 0;
+
+    order: -6;
+
+    background-color: @background-color-main;
+
+    a {
+      display: block;
+      width: 255px - 45px;
+      margin: 0;
+      margin-right: 270px;
+      padding: 33px 0;
+      padding-left: 45px;
+
+      font-family: "OpenSans", "Arial", sans-serif;
+      font-size: 17px;
+      line-height: 24px;
+      font-weight: 700;
+      color: @header-color;
+
+      text-decoration: none;
+    }
+  }
+
+  .site-list__item--search {
+    width: auto;
+    margin: 0;
+    padding: 0;
+
+    order: -5;
+
+    background-color: @background-color-main;
+
+    a {
+      display: block;
+      width: 0;
+      min-height: 90px;
+      margin: 0;
+      padding: 0;
+      padding-left: 83px;
+
+      font-family: "OpenSans", "Arial", sans-serif;
+      font-size: 17px;
+      line-height: 24px;
+      font-weight: 700;
+      color: @header-color;
+
+      text-decoration: none;
+
+      p {
+        display: none;
+      }
+    }
+  }
+
+  .site-list__item--cart {
+    width: auto;
+    margin: 0;
+    padding: 0;
+
+    order: -4;
+
+    background-color: @background-color-main;
+
+    a {
+      display: block;
+      width: 265px - 83px;
+      margin: 0;
+      padding: 33px 0;
+      padding-left: 83px;
+
+      font-family: "OpenSans", "Arial", sans-serif;
+      font-size: 17px;
+      line-height: 24px;
+      font-weight: 700;
+      color: @header-color;
+
+      text-decoration: none;
+    }
+  }
+
+  .site-list__item--new {
+    display: block;
+    width: auto;
+    margin: 0;
+    padding: 0;
+
+    order: -3;
+
+    background-color: transparent;
+
+    a {
+      display: block;
+      width: 175px;
+      margin: 0;
+      padding: 33px 0;
+
+      font-family: "OpenSans", "Arial", sans-serif;
+      font-size: 15px;
+      line-height: 24px;
+      font-weight: 700;
+      color: @header-color;
+
+      text-decoration: none;
+    }
+  }
+
+  .site-list__item--sale {
+    display: block;
+    width: auto;
+    margin: 0;
+    padding: 0;
+
+    order: -2;
+
+    background-color: transparent;
+
+    a {
+      display: block;
+      width: 255px - 45px;
+      margin: 0;
+      margin-right: 270px;
+      padding: 33px 0;
+      padding-left: 45px;
+
+      font-family: "OpenSans", "Arial", sans-serif;
+      font-size: 15px;
+      line-height: 24px;
+      font-weight: 700;
+      color: @header-color;
+
+      text-decoration: none;
+    }
+  }
+
+  .site-list__item--delivery {
+    display: block;
+    width: auto;
+    margin: 0;
+    padding: 0;
+
+    order: -1;
+
+    a {
+      display: block;
+      width: 350px;
+      margin: 0;
+      padding: 33px 0;
+
+      font-family: "OpenSans", "Arial", sans-serif;
+      font-size: 15px;
+      line-height: 24px;
+      font-weight: 400;
+      color: @header-color;
+
+      text-decoration: none;
+
+      p {
+        text-align: right;
+      }
+    }
   }
 }

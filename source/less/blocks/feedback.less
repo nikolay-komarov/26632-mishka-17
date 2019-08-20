@@ -30,10 +30,16 @@
     padding-top: 95px;
     padding-bottom: 140px;
 
-    // временно
-    background-image: url("../../img/review@1x.jpg");
+    background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: left 0 top 0;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/review@2x.jpg");
+      background-size: 350px auto;
+      background-position: left 0 top 0;
+      background-repeat: no-repeat;
+    }
   }
 
   .feedback__inner-wrapper {

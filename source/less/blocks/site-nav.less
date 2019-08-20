@@ -80,17 +80,6 @@
   line-height: 30px;
   font-weight: 700;
   color: @header-color;
-
-  // background-color: #f9f9f9;
-
-  // background-image: url("../img/hero-mobile@1x.jpg");
-  // background-position-x: 50%;
-  // background-repeat: no-repeat;
-
-  // @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-  //   background-image: url("../../img/hero-mobile@2x.jpg");
-  //   background-size: 100% auto;
-  // }
 }
 
 @media (min-width: @tablet-width) {
@@ -102,10 +91,10 @@
 
     font-size: 43px;
     line-height: 50px;
+  }
 
-    // background-image: url("../img/hero-tablet@1x.jpg");
-    // background-position-x: 50%;
-    // background-repeat: no-repeat;
+  .site-nav__title br {
+    display: none;
   }
 }
 
@@ -118,10 +107,6 @@
 
     font-size: 53px;
     line-height: 57px;
-
-    // background-image: url("../img/hero-desktop@1x.jpg");
-    // background-position-x: 50%;
-    // background-repeat: no-repeat;
   }
 }
 
@@ -140,13 +125,13 @@
 }
 
 .site-nav__item {
-  display: inline-block;
+  display: block;
   width: 320px;
   margin: 0;
   padding: 0;
 
   a {
-    display: inline-block;
+    display: block;
     width: 130px;
     margin: 0;
     padding: 27px 0;
@@ -160,15 +145,38 @@
     color: #ffffff;
 
     text-decoration: none;
+
+    position: relative;
+
+    svg {
+      fill: #149080;
+      opacity: 0.5;
+
+      position: absolute;
+    }
   }
 }
 
 .site-nav__item--interior {
   background-color: #63d1bb;
+
+  a {
+    svg {
+      right: 37px;
+      top: 23px;
+    }
+  }
 }
 
 .site-nav__item--toys {
   background-color: #56c3b2;
+
+  a {
+    svg {
+      right: 27px;
+      top: 21px;
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -187,6 +195,28 @@
       margin: 0;
       padding: 35px;
       padding-right: 167px;
+    }
+  }
+
+  .site-nav__item--interior {
+    background-color: #63d1bb;
+
+    a {
+      svg {
+        right: 36px;
+        top: 30px;
+      }
+    }
+  }
+
+  .site-nav__item--toys {
+    background-color: #56c3b2;
+
+    a {
+      svg {
+        right: 34px;
+        top: 30px;
+      }
     }
   }
 }
