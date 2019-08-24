@@ -6,6 +6,24 @@
   padding: 0;
 
   background-color: #f9f9f9;
+
+  position: relative;
+}
+
+@media (min-width: @tablet-width) {
+  .site-nav::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -19px;
+
+    width: 100%;
+    height: 34px;
+
+    z-index: 2;
+
+    background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='1150px' height='34px' viewBox='0 0 1150 34' enable-background='new 0 0 1150 34' xml:space='preserve'%3E%3Cpath fill='%23FFFFFF' d='M1121.252,0c-14.375,0-14.375,14-28.749,14s-14.374-14-28.748-14s-14.374,14-28.748,14 c-14.375,0-14.375-14-28.75-14c-14.374,0-14.374,14-28.748,14S963.135,0,948.761,0s-14.374,14-28.749,14S905.637,0,891.263,0 s-14.374,14-28.749,14s-14.375-14-28.75-14c-14.371,0-14.371,14-28.743,14c-14.375,0-14.375-14-28.75-14 c-14.372,0-14.372,14-28.744,14c-14.374,0-14.374-14-28.747-14s-14.373,14-28.747,14C675.66,14,675.66,0,661.287,0 c-14.374,0-14.374,14-28.748,14c-14.375,0-14.375-14-28.751-14c-14.374,0-14.374,14-28.748,14S560.666,0,546.292,0 s-14.374,14-28.748,14C503.17,14,503.17,0,488.796,0c-14.375,0-14.375,14-28.75,14C445.67,14,445.67,0,431.293,0 c-14.375,0-14.375,14-28.75,14c-14.375,0-14.375-14-28.751-14c-14.375,0-14.375,14-28.75,14S330.666,0,316.291,0 s-14.375,14-28.751,14c-14.376,0-14.376-14-28.753-14c-14.374,0-14.374,14-28.747,14c-14.375,0-14.375-14-28.75-14 c-14.375,0-14.375,14-28.751,14c-14.377,0-14.377-14-28.754-14c-14.377,0-14.377,14-28.755,14c-14.378,0-14.378-14-28.756-14 S71.896,14,57.518,14C43.139,14,43.139,0,28.759,0S14.38,14,0,14v20h1150V14C1135.626,14,1135.626,0,1121.252,0z'/%3E%3C/svg%3E%0A");
+  }
 }
 
 .site-nav__wrapper {
@@ -124,14 +142,13 @@
   list-style: none;
 }
 
-// site-nav__item-wrapper--interior {
-//   display: block;
-//   width: 320px;
-//   margin: 0;
-//   padding: 0;
+.site-nav__item-wrapper--interior {
+  background-color: #63d1bb;
+}
 
-//   background-color: #149080;
-// }
+.site-nav__item-wrapper--toys {
+  background-color: #56c3b2;
+}
 
 .site-nav__item {
   display: block;
@@ -139,7 +156,9 @@
   margin: 0;
   padding: 0;
 
-  a {
+  text-decoration: none;
+
+  .site-nav__item-link {
     display: block;
     width: 130px;
     margin: 0;
@@ -156,43 +175,48 @@
     text-decoration: none;
 
     position: relative;
+  }
 
-    svg {
-      fill: #149080;
-      opacity: 0.5;
+  .site-nav__item-logo {
+    fill: #149080;
+    opacity: 0.5;
 
-      position: absolute;
+    position: absolute;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+
+    .site-nav__item-logo {
+      opacity: 0.7;
     }
   }
 
-  // &:hover {
-  //   transform: translateY(-5px); // !переделать
+  &:active {
+    transform: translateY(0);
 
-  // background-position: 5px;
-  // background-color: #59d5bc;
-  // padding-bottom: 5px;
-  // }
+    .site-nav__item-link,
+    .site-nav__item-logo {
+      opacity: 0.3;
+    }
+  }
 }
 
 .site-nav__item--interior {
   background-color: #63d1bb;
 
-  a {
-    svg {
-      right: 37px;
-      top: 23px;
-    }
+  .site-nav__item-logo {
+    right: 37px;
+    top: 23px;
   }
 }
 
 .site-nav__item--toys {
   background-color: #56c3b2;
 
-  a {
-    svg {
-      right: 27px;
-      top: 21px;
-    }
+  .site-nav__item-logo {
+    right: 27px;
+    top: 21px;
   }
 }
 
@@ -207,7 +231,7 @@
   .site-nav__item {
     width: 334px;
 
-    a {
+    .site-nav__item-link {
       width: 132px;
       margin: 0;
       padding: 35px;
@@ -218,22 +242,18 @@
   .site-nav__item--interior {
     background-color: #63d1bb;
 
-    a {
-      svg {
-        right: 36px;
-        top: 30px;
-      }
+    .site-nav__item-logo {
+      right: 36px;
+      top: 30px;
     }
   }
 
   .site-nav__item--toys {
     background-color: #56c3b2;
 
-    a {
-      svg {
-        right: 34px;
-        top: 30px;
-      }
+    .site-nav__item-logo {
+      right: 34px;
+      top: 30px;
     }
   }
 }
@@ -246,7 +266,7 @@
   .site-nav__item {
     width: 525px;
 
-    a {
+    .site-nav__item-link {
       width: 140px;
       padding-right: 350px;
     }

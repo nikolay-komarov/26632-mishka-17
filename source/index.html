@@ -248,7 +248,7 @@
             <img class="page-header__logo-img" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка - интенет-магазин вещиц для дома">
           </picture>
         </a>
-        <nav class="main-nav main-nav--opened main-nav--nojs">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__list site-list">
@@ -297,19 +297,21 @@
           <h2 class="site-nav__title">Милые штуки ручной<br> работы для дома</h2>
           <ul class="site-nav__list">
             <li class="site-nav__item-wrapper--interior">
-              <div class="site-nav__item site-nav__item--interior">
-                <a href="#">Предметы интерьера
-                  <svg width="40" height="62">
+              <a href="#" class="site-nav__item site-nav__item--interior">
+                <p class="site-nav__item-link">Предметы интерьера
+                  <svg class="site-nav__item-logo" width="40" height="62">
                     <use xlink:href="#icon-interior"></use>
                   </svg>
-                </a>
-              </div>
+                </p>
+              </a>
             </li>
-            <li class="site-nav__item site-nav__item--toys">
-              <a href="#">Детские игрушки
-                <svg width="60" height="60">
-                  <use xlink:href="#icon-toy"></use>
-                </svg>
+            <li class="site-nav__item-wrapper--toys">
+              <a href="#" class="site-nav__item site-nav__item--toys">
+                <p class="site-nav__item-link">Детские игрушки
+                  <svg class="site-nav__item-logo" width="60" height="60">
+                    <use xlink:href="#icon-toy"></use>
+                  </svg>
+                </p>
               </a>
             </li>
           </ul>
@@ -414,8 +416,18 @@
             </div>
             <div class="feedback__action-wrapper">
               <div class="feedback__action-btn-wrapper">
-                <button class="feedback__nav feedback__nav-prev" type="button">Назад</button>
-                <button class="feedback__nav feedback__nav-next" type="button">Вперед</button>
+                <button class="feedback__nav feedback__nav-prev" type="button">
+                  <span class="visually-hidden">Назад</span>
+                  <svg width="50" height="26">
+                    <use xlink:href="#icon-left-arrow"></use>
+                  </svg>
+                </button>
+                <button class="feedback__nav feedback__nav-next" type="button">
+                  <span class="visually-hidden">Вперед</span>
+                  <svg width="50" height="26">
+                    <use xlink:href="#icon-right-arrow"></use>
+                  </svg>
+                </button>
               </div>
               <a href="#" class="feedback__write-us button">Написать</a>
             </div>
