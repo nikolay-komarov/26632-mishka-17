@@ -20,7 +20,9 @@
 
   background-color: @background-color-main;
 
-  a {
+  box-shadow: inset 0 0 1px 1px #ececec;
+
+  &-link {
     display: block;
     width: 230px;
     margin: 0;
@@ -34,16 +36,34 @@
     color: @header-color;
 
     text-decoration: none;
+  }
 
-    p {
-      margin: 0;
-      padding: 0;
+  &-link-header {
+    margin: 0;
+    padding: 0;
+  }
+
+  &:hover {
+    opacity: 0.6;
+
+    .site-list__item-logo {
+      fill: #63d1bb;
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    .site-list__item-logo {
+      fill: #63d1bb;
+      opacity: 0.3;
     }
   }
 }
 
 .site-list__item--search {
-  svg {
+  .site-list__item-logo {
     position: absolute;
     top: 32px;
     left: 32px;
@@ -53,7 +73,7 @@
 }
 
 .site-list__item--cart {
-  svg {
+  .site-list__item-logo {
     position: absolute;
     top: 30px;
     left: 30px;
@@ -66,6 +86,12 @@
 .site-list__item--new,
 .site-list__item--sale {
   display: none;
+}
+
+.site-list__item--current {
+  &:hover {
+    opacity: 1;
+  }
 }
 
 
@@ -83,6 +109,8 @@
 
   .site-list__item {
     background-color: transparent;
+
+    box-shadow: none;
   }
 
   .site-list__item--search {
@@ -95,22 +123,22 @@
 
     background-color: @background-color-main;
 
-    a {
+    .site-list__item-link {
       display: block;
       width: 0;
       min-height: 90px;
       margin: 0;
       padding: 0;
       padding-left: 83px;
+    }
 
-      p {
-        display: none;
-      }
+    .site-list__item-link-header {
+      display: none;
+    }
 
-      svg {
-        top: 37px;
-        left: 33px;
-      }
+    .site-list__item-logo {
+      top: 37px;
+      left: 33px;
     }
   }
 
@@ -123,17 +151,17 @@
 
     background-color: @background-color-main;
 
-    a {
+    .site-list__item-link {
       display: block;
       width: 264px - 82px;
       margin: 0;
       padding: 33px 0;
       padding-left: 82px;
+    }
 
-      svg {
-        top: 35px;
-        left: 31px;
-      }
+    .site-list__item-logo {
+      top: 35px;
+      left: 31px;
     }
   }
 
@@ -144,7 +172,7 @@
 
     order: -3;
 
-    a {
+    .site-list__item-link {
       display: block;
       width: 167px;
       margin: 0;
@@ -167,7 +195,7 @@
 
     order: -2;
 
-    a {
+    .site-list__item-link {
       display: block;
       width: 167px;
       margin: 0;
@@ -191,7 +219,7 @@
 
     order: -1;
 
-    a {
+    .site-list__item-link {
       display: block;
       width: 334px;
       margin: 0;
@@ -204,10 +232,10 @@
       color: @header-color;
 
       text-decoration: none;
+    }
 
-      p {
-        text-align: right;
-      }
+    .site-list__item-link-header {
+      text-align: right;
     }
   }
 }
@@ -229,7 +257,7 @@
 
     background-color: @background-color-main;
 
-    a {
+    .site-list__item-link {
       display: block;
       width: 175px;
       margin: 0;
@@ -254,7 +282,7 @@
 
     background-color: @background-color-main;
 
-    a {
+    .site-list__item-link {
       display: block;
       width: 255px - 45px;
       margin: 0;
@@ -281,7 +309,7 @@
 
     background-color: @background-color-main;
 
-    a {
+    .site-list__item-link {
       display: block;
       width: 0;
       min-height: 90px;
@@ -296,10 +324,10 @@
       color: @header-color;
 
       text-decoration: none;
+    }
 
-      p {
-        display: none;
-      }
+    .site-list__item-link-header {
+      display: none;
     }
   }
 
@@ -312,7 +340,7 @@
 
     background-color: @background-color-main;
 
-    a {
+    .site-list__item-link {
       display: block;
       width: 265px - 83px;
       margin: 0;
@@ -339,7 +367,7 @@
 
     background-color: transparent;
 
-    a {
+    .site-list__item-link {
       display: block;
       width: 175px;
       margin: 0;
@@ -365,7 +393,7 @@
 
     background-color: transparent;
 
-    a {
+    .site-list__item-link {
       display: block;
       width: 255px - 45px;
       margin: 0;
@@ -391,7 +419,7 @@
 
     order: -1;
 
-    a {
+    .site-list__item-link {
       display: block;
       width: 350px;
       margin: 0;
@@ -404,10 +432,10 @@
       color: @header-color;
 
       text-decoration: none;
+    }
 
-      p {
-        text-align: right;
-      }
+    .site-list__item-link-header {
+      text-align: right;
     }
   }
 }
