@@ -81,8 +81,27 @@
 
   background-color: transparent;
 
+  position: relative;
+
   &--field {
     padding-bottom: 0;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 7px;
+    right: 0;
+
+    width: 200px;
+    height: 2px;
+
+    background-color: #62d1ba;
+  }
+
+  &--email::after {
+    width: 180px;
   }
 }
 
@@ -92,6 +111,10 @@
     padding-top: 20px;
     font-size: 19px;
     line-height: 18px;
+
+    &::after {
+      display: none;
+    }
   }
 }
 
@@ -100,7 +123,6 @@
     min-width: 175px;
     padding: 0;
     padding-top: 20px;
-    text-align: center;
   }
 }
 
@@ -145,6 +167,7 @@
   color: @header-color;
 
   background-color: @background-color-main;
+  position: relative;
 }
 
 @media (min-width: @tablet-width) {
@@ -178,6 +201,53 @@
     width: 350px - 80px;
     padding-left: 80px;
   }
+}
+
+
+// радио-кнопки
+
+.order-from__type-input {
+  appearance: none;
+}
+
+.order-form__radio-btn-out,
+.order-form__radio-btn-in {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 52px;
+  height: 52px;
+}
+
+.order-form__radio-btn-out {
+  stroke: #444444;
+  stroke-width: 2px;
+  fill: transparent;
+}
+
+.order-form__radio-btn-in {
+  fill: transparent;
+}
+
+.order-from__type-input:hover + .order-form__radio-btn-out,
+.order-from__type-input:focus + .order-form__radio-btn-out {
+  stroke: #62d1ba;
+}
+
+.order-from__type-input:checked ~ .order-form__radio-btn-in {
+  fill: #62d1ba;
+}
+
+// ? не срабатывает!
+.order-form__type-input:active + .order-form__radio-btn-out {
+  stroke: #444444;
+  opacity: 0.3;
+}
+
+.order-form__type-input:checked:active + .order-form__radio-btn-out {
+  stroke: #444444;
+  opacity: 0.3;
 }
 
 
@@ -221,6 +291,8 @@
   color: @header-color;
 
   background-color: transparent;
+
+  position: relative;
 }
 
 @media (min-width: @tablet-width) {
@@ -273,6 +345,60 @@
 }
 
 
+// Чек-боксы
+
+.order-form__color-item-input {
+  appearance: none;
+}
+
+.order-form__color-check-box-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 52px;
+  height: 52px;
+
+  fill: transparent;
+  stroke: #444444;
+  stroke-width: 3px;
+}
+
+.order-form__color-check-box-flag {
+  position: absolute;
+  top: 15px; // (52 - 22) / 2 + отступ бокса
+  left: 9px; // (52 - 33) / 2 + отступ блока
+
+  width: 33px;
+  height: 22px;
+
+  display: none;
+}
+
+.order-form__color-item-input:hover + .order-form__color-check-box-border,
+.order-form__color-item-input:focus + .order-form__color-check-box-border {
+  stroke: #62d1ba;
+}
+
+.order-form__color-item-input:active + .order-form__color-check-box-border {
+  stroke: #444444;
+  opacity: 0.3;
+}
+
+.order-form__color-item-input:checked:hover + .order-form__color-check-box-border {
+  stroke: #62d1ba;
+}
+
+.order-form__color-item-input:checked:active + .order-form__color-check-box-border {
+  stroke: #444444;
+  opacity: 0.3;
+}
+
+.order-form__color-item-input:checked ~ .order-form__color-check-box-flag {
+  display: block;
+}
+
+
 /* блок ФИО */
 
 .order-form__user-name-wrapper {
@@ -318,6 +444,25 @@
   background-color: @background-color-main;
 }
 
+.order-form__input-wrapper {
+  // ++ состояния
+  &:hover,
+  &:focus,
+  &:active {
+    .order-form__input {
+      border-bottom: 2px solid #62d1ba;
+    }
+  }
+
+  &:hover .order-form__input-icon,
+  &:focus .order-form__input-icon,
+  &:active .order-form__input-icon {
+    fill: #62d1ba;
+    opacity: 1;
+  }
+  // -- состояния
+}
+
 .order-form__input {
   display: block;
   box-sizing: border-box;
@@ -337,13 +482,26 @@
   border-bottom: 2px solid @header-color;
   outline: none;
 
+  // ++ состояния
+  &:hover,
+  &:focus,
+  &:active {
+    border-bottom: 2px solid #62d1ba;
+  }
+
+  &:hover + .order-form__input-icon,
+  &:focus + .order-form__input-icon,
+  &:active + .order-form__input-icon {
+    fill: #62d1ba;
+    opacity: 1;
+  }
+  // -- состояния
+
   &::placeholder {
     font-family: "OpenSans", "Arial", sans-serif;
     font-size: 17px;
     line-height: 18px;
     font-weight: 400;
-
-    padding: 25px 0;
 
     color: @main-text-color;
 
@@ -357,6 +515,12 @@
     border: 2px solid @header-color;
     overflow: hidden;
     resize: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border: 2px solid #62d1ba;
+    }
   }
 
   &--description::placeholder {
@@ -403,9 +567,10 @@
   .order-form__input {
     width: 375px;
 
+    padding-left: 20px;
+
     &::placeholder {
       padding: 25px 0;
-      padding-left: 20px;
     }
   }
 
@@ -452,10 +617,10 @@
 
   .order-form__input {
     width: 575px;
+    padding-left: 20px;
 
     &::placeholder {
       padding: 25px 0;
-      padding-left: 20px;
     }
   }
 
@@ -487,7 +652,34 @@
 
 .order-form__user-contacts {
   padding-bottom: 35px;
+  position: relative;
 }
+
+.order-form__input-icon {
+  position: absolute;
+
+  &--phone {
+    right: 8px;
+    top: 16px + 25px + 12px;
+  }
+
+  &--email {
+    right: 0;
+    top: 16px + 25px + 15px;
+  }
+
+  fill: #000000;
+  opacity: 0.2;
+
+  // состояния
+  &:hover,
+  &:focus,
+  &:active {
+    fill: #62d1ba;
+    opacity: 1;
+  }
+}
+
 
 @media (min-width: @tablet-width) {
   .order-form__user-contacts-wrapper {
@@ -518,6 +710,33 @@
   .order-form__input--email {
     width: 500px;
     background-color: transparent;
+  }
+
+  .order-form__input-icon {
+    display: block;
+
+    position: absolute;
+
+    &--phone {
+      right: 26px;
+      top: 12px;
+    }
+
+    &--email {
+      right: 22px;
+      top: 15px;
+    }
+
+    fill: #000000;
+    opacity: 0.2;
+
+    // состояния
+    &:hover,
+    &:focus,
+    &:active {
+      fill: #62d1ba;
+      opacity: 1;
+    }
   }
 }
 

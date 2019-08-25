@@ -236,6 +236,19 @@
         </symbol></svg>
       </div>
 
+      <!-- символы для элементов формы -->
+      <div style="display: none">
+        <svg><symbol id="btn-radio-out" viewBox="0 0 52 52">
+          <circle r="25" cx="50%"cy="50%"></circle>
+        </symbol></svg>
+        <svg><symbol id="btn-radio-in" viewBox="0 0 52 52">
+          <circle r="11" cx="50%"cy="50%"></circle>
+        </symbol></svg>
+        <svg><symbol id="btn-check-box-border" viewBox="0 0 52 52">
+          <rect width="52" height="52"></rect>
+        </symbol></svg>
+      </div>
+
     <header class="page-header">
       <div class="page-header__wrapper">
         <a href="index.html" class="page-header__logo">
@@ -304,10 +317,24 @@
               <h3 class="order-form__header-group">Тип</h3>
               <div class="order-from__type-control-wrapper">
                 <label class="order-form__type-name">
-                  <input class="order-from__type-input" type="radio" name="order-form-type" value="type-accessory" checked>Аксессуар для интерьера
+                  <input class="order-from__type-input" type="radio" name="order-form-type" value="type-accessory" checked>
+                  <svg class="order-form__radio-btn-out" width="52" height="52">
+                    <use xlink:href="#btn-radio-out"></use>
+                  </svg>
+                  <svg class="order-form__radio-btn-in" width="52" height="52">
+                    <use xlink:href="#btn-radio-in"></use>
+                  </svg>
+                  Аксессуар для интерьера
                 </label>
                 <label class="order-form__type-name">
-                  <input class="order-from__type-input" type="radio" name="order-form-type" value="type-toy">Детская игрушка
+                  <input class="order-from__type-input" type="radio" name="order-form-type" value="type-toy">
+                  <svg class="order-form__radio-btn-out" width="52" height="52">
+                    <use xlink:href="#btn-radio-out"></use>
+                  </svg>
+                  <svg class="order-form__radio-btn-in" width="52" height="52">
+                    <use xlink:href="#btn-radio-in"></use>
+                  </svg>
+                  Детская игрушка
                 </label>
               </div>
             </div>
@@ -319,26 +346,62 @@
               <div class="order-form__color-control-wrapper">
                 <label class="order-form__color-item-name">
                   <input class="order-form__color-item-input" type="checkbox" name="order-form-color-white" value="color-white" checked>
+                  <svg class="order-form__color-check-box-border" width="52" height="52">
+                    <use xlink:href="#btn-check-box-border"></use>
+                  </svg>
+                  <svg class="order-form__color-check-box-flag" width="33" height="22">
+                    <use xlink:href="#icon-tick"></use>
+                  </svg>
                   Белый
                 </label>
                 <label class="order-form__color-item-name">
                   <input class="order-form__color-item-input" type="checkbox" name="order-form-color-gray" value="color-gray" checked>
+                  <svg class="order-form__color-check-box-border" width="52" height="52">
+                    <use xlink:href="#btn-check-box-border"></use>
+                  </svg>
+                  <svg class="order-form__color-check-box-flag" width="33" height="22">
+                    <use xlink:href="#icon-tick"></use>
+                  </svg>
                   Серый
                 </label>
                 <label class="order-form__color-item-name">
                   <input class="order-form__color-item-input" type="checkbox" name="order-form-color-tiffany" value="color-tiffany">
+                  <svg class="order-form__color-check-box-border" width="52" height="52">
+                    <use xlink:href="#btn-check-box-border"></use>
+                  </svg>
+                  <svg class="order-form__color-check-box-flag" width="33" height="22">
+                    <use xlink:href="#icon-tick"></use>
+                  </svg>
                   &laquo;Тиффани&raquo;
                 </label>
                 <label class="order-form__color-item-name">
                   <input class="order-form__color-item-input" type="checkbox" name="order-form-color-black" value="color-black">
+                  <svg class="order-form__color-check-box-border" width="52" height="52">
+                    <use xlink:href="#btn-check-box-border"></use>
+                  </svg>
+                  <svg class="order-form__color-check-box-flag" width="33" height="22">
+                    <use xlink:href="#icon-tick"></use>
+                  </svg>
                   Черный
                 </label>
                 <label class="order-form__color-item-name">
                   <input class="order-form__color-item-input" type="checkbox" name="order-form-color-pink" value="color-pink">
+                  <svg class="order-form__color-check-box-border" width="52" height="52">
+                    <use xlink:href="#btn-check-box-border"></use>
+                  </svg>
+                  <svg class="order-form__color-check-box-flag" width="33" height="22">
+                    <use xlink:href="#icon-tick"></use>
+                  </svg>
                   Розовый
                 </label>
                 <label class="order-form__color-item-name">
                   <input class="order-form__color-item-input" type="checkbox" name="order-form-color-orange" value="color-orange">
+                  <svg class="order-form__color-check-box-border" width="52" height="52">
+                    <use xlink:href="#btn-check-box-border"></use>
+                  </svg>
+                  <svg class="order-form__color-check-box-flag" width="33" height="22">
+                    <use xlink:href="#icon-tick"></use>
+                  </svg>
                   Оранжевый
                 </label>
               </div>
@@ -369,16 +432,22 @@
             <div class="order-form__user-contacts-inner-wrapper">
               <div class="order-form__user-contacts">
                 <h3 class="order-form__header-group order-form__header-group--phone">Тел</h3>
-                <!-- <label class="order-form__user-label"> -->
-                <input class="order-form__input order-form__input--phone" type="text" placeholder="+7 XXX XXX XX XX*" name="order-form-user-phone">
-                <!-- </label> -->
+                <div class="order-form__input-wrapper">
+                  <input class="order-form__input order-form__input--phone" type="tel" placeholder="+7 XXX XXX XX XX*" name="order-form-user-phone">
+                  <svg class="order-form__input-icon order-form__input-icon--phone" width="25" height="25">
+                    <use xlink:href="#icon-phone"></use>
+                  </svg>
+                </div>
               </div>
 
               <div class="order-form__user-contacts">
                 <h3 class="order-form__header-group  order-form__header-group--email">e-mail</h3>
-                <!-- <label class="order-form__user-label"> -->
-                <input class="order-form__input order-form__input--email" type="text" placeholder="Ваш Email*" name="order-form-user-email">
-                <!-- </label> -->
+                <div class="order-form__input-wrapper">
+                  <input class="order-form__input order-form__input--email" type="email" placeholder="Ваш Email*" name="order-form-user-email">
+                  <svg class="order-form__input-icon order-form__input-icon--email" width="32" height="21">
+                    <use xlink:href="#icon-mail"></use>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
