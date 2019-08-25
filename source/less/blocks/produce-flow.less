@@ -7,14 +7,24 @@
 }
 
 .produce-flow__wrapper {
-  display: flex;
   width: 260px;
   margin: 0 auto;
   padding: 0 30px;
+
+  background-color: @background-color-main;
+}
+
+.produce-flow__wrapper-inner {
+  display: flex;
+  width: 260px;
+  margin: 0;
+  padding: 0;
   flex-direction: column;
   align-items: flex-start;
 
   background-color: @background-color-main;
+
+  box-shadow: 0 0 1px 0 #ececec;
 
   position: relative;
 }
@@ -24,7 +34,13 @@
     width: @tablet-width - 100px;
     margin: 0 auto;
     padding: 0 50px;
-    padding-bottom: 70px;
+    padding-bottom: 65px;
+  }
+
+  .produce-flow__wrapper-inner {
+    width: @tablet-width - 100px;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -34,6 +50,12 @@
     margin: 0 auto;
     padding: 0 50px;
     padding-bottom: 110px;
+  }
+
+  .produce-flow__wrapper-inner {
+    width: @desktop-width - 100px;
+    margin: 0;
+    padding: 0;
 
     flex-direction: row;
     justify-content: space-between;
@@ -48,6 +70,8 @@
   padding: 0;
   flex-direction: column;
   align-items: flex-start;
+
+  position: relative;
 }
 
 @media (min-width: @tablet-width) {
@@ -86,6 +110,14 @@
   background-color: @background-color-main;
 }
 
+.produce-flow__header-icon {
+  position: absolute;
+  top: 35px;
+  left: 34px;
+
+  fill: #63d1bb;
+}
+
 @media (min-width: @tablet-width) {
   .produce-flow__header {
     width: @tablet-width - 100px;
@@ -94,6 +126,11 @@
 
     font-size: 20px;
     line-height: 24px;
+  }
+
+  .produce-flow__header-icon {
+    top: 25px;
+    left: 40px;
   }
 }
 
@@ -104,6 +141,11 @@
     padding-top: 95px;
     padding-bottom: 50px;
   }
+
+  .produce-flow__header-icon {
+    top: 40px;
+    left: 60px;
+  }
 }
 
 .produce-flow__img-wrapper {
@@ -112,10 +154,32 @@
 
   position: absolute;
   top: 108px;
-  left: 30px;
+  left: 0;
+
+  line-height: 0;
+  font-size: 0;
 
   background-color: #ececec;
+
+  z-index: 2;
 }
+
+.produce-flow__img-play-icon {
+  position: absolute;
+  top: 40px; // (154px / 2) - (101px / 2);
+  left: 80px; // (260px / 2) - (77px / 2);
+}
+
+.produce-flow__img-play-icon:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.produce-flow__img-play-icon:active {
+  transform: scale(0.8);
+  cursor: pointer;
+}
+
 
 @media (min-width: @tablet-width) {
   .produce-flow__img-wrapper {
@@ -127,6 +191,11 @@
     height: 455px;
     margin: 0 auto;
     padding: 0;
+  }
+
+  .produce-flow__img-play-icon {
+    top: 190px;
+    left: 285px;
   }
 }
 
