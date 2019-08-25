@@ -253,10 +253,10 @@
           <div class="main-nav__wrapper">
             <ul class="main-nav__list site-list">
               <li class="site-list__item site-list__item--catalog">
-                <a class="site-list__item-link" href="catalog.html"><p class="site-list__item-link-header" >Каталог товаров</p></a>
+                <a class="site-list__item-link" href="catalog.html"><p class="site-list__item-link-header">Каталог товаров</p></a>
               </li>
               <li class="site-list__item site-list__item--order">
-                <a class="site-list__item-link" href="form.html"><p class="site-list__item-link-header" >Вязание на заказ</p></a>
+                <a class="site-list__item-link" href="form.html"><p class="site-list__item-link-header">Вязание на заказ</p></a>
               </li>
               <li class="site-list__item site-list__item--search">
                 <a class="site-list__item-link" href="#">
@@ -275,13 +275,13 @@
                 </a>
               </li>
               <li class="site-list__item site-list__item--delivery">
-                <a class="site-list__item-link" href="#"><p class="site-list__item-link-header" >Бесплатная доставка по России</p></a>
+                <a class="site-list__item-link" href="#"><p class="site-list__item-link-header">Бесплатная доставка по России</p></a>
               </li>
               <li class="site-list__item site-list__item--new">
-                <a class="site-list__item-link" href="#"><p class="site-list__item-link-header" >Распродажа</p></a>
+                <a class="site-list__item-link" href="#"><p class="site-list__item-link-header">Распродажа</p></a>
               </li>
               <li class="site-list__item site-list__item--sale">
-                <a class="site-list__item-link" href="#"><p class="site-list__item-link-header" >Новые поступления</p></a>
+                <a class="site-list__item-link" href="#"><p class="site-list__item-link-header">Новые поступления</p></a>
               </li>
             </ul>
           </div>
@@ -439,26 +439,36 @@
         <div class="contacts__wrapper">
           <div class="contacts__content-wrapper">
             <h2 class="contacts__header">Контакты</h2>
+            <svg class="contacts__flag" width="47" height="81">
+              <use xlink:href="#icon-flag"></use>
+            </svg>
             <ul class="contacts__list">
-              <ul class="contacts__item">
-                <li class="contacts__item-title"><span>e-mail:</span></li>
-                <li class="contacts__item-value"><a href="mailto:info@mimimishkashop.ru" class="contacts__item-value-link">info@mimimishkashop.ru</a></li>
-              </ul>
-              <ul class="contacts__item">
-                <li class="contacts__item-title"><span>адрес:</span></li>
-                <li class="contacts__item-value"><address>г. Санкт-Петербург,<br>
-                    ул. Большая Конюшенная,<br>
-                    д. 19/8, офис 101</address>
-                </li>
-              </ul>
+              <div class="contacts__item-wrapper">
+                <ul class="contacts__item">
+                  <li class="contacts__item-title"><span>e-mail:</span></li>
+                  <li class="contacts__item-value"><a href="mailto:info@mimimishkashop.ru" class="contacts__item-value-link">info@mimimishkashop.ru</a></li>
+                </ul>
+              </div>
+              <div class="contacts__item-wrapper">
+                <ul class="contacts__item">
+                  <li class="contacts__item-title"><span>адрес:</span></li>
+                  <li class="contacts__item-value"><address>г. Санкт-Петербург,<br>
+                      ул. Большая Конюшенная,<br>
+                      д. 19/8, офис 101</address>
+                  </li>
+                </ul>
+              </div>
             </ul>
           </div>
           <a href="#" class="contacts__map">
-            <picture>
+            <!-- <picture>
               <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x" width="525" height="457" alt="Месторасполоежеине магазина на карте">
               <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x" width="768" height="457" alt="Месторасполоежеине магазина на карте">
               <img class="contacts__map-img" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="460" alt="Месторасполоежеине магазина на карте">
-            </picture>
+            </picture> -->
+
+            <iframe class="contacts__map-google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1566675280440!5m2!1sru!2sru" allowfullscreen></iframe>
+
           </a>
           <a href="#" class="contacts__write-us button">Напишите нам</a>
         </div>

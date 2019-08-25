@@ -45,6 +45,8 @@
   margin: 0;
   padding: 0;
   padding-bottom: 45px;
+
+  position: relative;
 }
 
 @media (min-width: @tablet-width) {
@@ -95,6 +97,38 @@
     line-height: 57px;
   }
 }
+
+
+/* флаг */
+
+.contacts__flag {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts__flag {
+    display: block;
+    position: absolute;
+
+    top: -15px;
+    right: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts__flag {
+    display: block;
+    position: absolute;
+
+    top: 75px;
+    left: 65px;
+  }
+}
+
+
+/* блок с адресами */
 
 .contacts__list {
   display: flex;
@@ -191,6 +225,23 @@
   }
 }
 
+.contacts__item-value-link {
+  text-decoration: none;
+
+  color: @main-text-color;
+
+  border-bottom: 1px solid #46c1ae;
+
+  &:hover {
+    color: #46c1ae;
+  }
+
+  &:active {
+    color: #46c1ae;
+    opacity: 0.3;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .contacts__item-value {
     width: 260px;
@@ -199,15 +250,42 @@
 
 @media (min-width: @desktop-width) {
   .contacts__item-value {
-
     width: 275px;
   }
 }
+
+/* блок с картой */
 
 .contacts__map {
   display: flex;
   line-height: 0;
   width: 320px;
+}
+
+.contacts__map-google {
+  box-sizing: border-box;
+  width: 320px;
+  height: 460px;
+  border: none;
+  margin: 0;
+  padding: 0;
+
+  line-height: 0;
+  font-size: 0;
+
+  background-color: @background-color-map;
+
+  background-image: url("../img/map-mobile@1x.jpg");
+  background-size: 320px auto;
+  background-repeat: no-repeat;
+  background-position: left 0 top 0;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/map-mobile@2x.jpg");
+    background-size: 320px auto;
+    background-position: left 0 top 0;
+    background-repeat: no-repeat;
+  }
 }
 
 .contacts__map-img {
@@ -220,10 +298,27 @@
   .contacts__map {
     width: 768px;
 
-    background-color: #f4e9d7;
+    background-color: @background-color-map;
 
     align-items: center;
     justify-content: center;
+  }
+
+  .contacts__map-google {
+    width: 768px;
+    height: 457px;
+
+    background-image: url("../img/map-tablet@1x.jpg");
+    background-size: 768px auto;
+    background-repeat: no-repeat;
+    background-position: left 0 top 0;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/map-tablet@2x.jpg");
+      background-size: 768px auto;
+      background-position: left 0 top 0;
+      background-repeat: no-repeat;
+    }
   }
 
   .contacts__map-img {
@@ -243,6 +338,23 @@
     justify-content: center;
   }
 
+  .contacts__map-google {
+    width: 525px;
+    height: 457px;
+
+    background-image: url("../img/map-desktop@1x.jpg");
+    background-size: 525px auto;
+    background-repeat: no-repeat;
+    background-position: left 0 top 0;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/map-desktop@2x.jpg");
+      background-size: 525px auto;
+      background-position: left 0 top 0;
+      background-repeat: no-repeat;
+    }
+  }
+
   .contacts__map-img {
     width: 525px;
 
@@ -250,6 +362,8 @@
   }
 }
 
+
+/* кнопка Напишите нам */
 
 .contacts__write-us {
   display: block;
