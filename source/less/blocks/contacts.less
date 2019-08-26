@@ -260,6 +260,8 @@
   display: flex;
   line-height: 0;
   width: 320px;
+
+  position: relative;
 }
 
 .contacts__map-google {
@@ -294,6 +296,15 @@
   background-color: @background-color-map;
 }
 
+.contacts__map-pin {
+  width: 67px;
+  height: 100px;
+
+  position: absolute;
+  top: 145px;
+  left: 130px;
+}
+
 @media (min-width: @tablet-width) {
   .contacts__map {
     width: 768px;
@@ -325,6 +336,11 @@
     width: 768px;
 
     background-color: @background-color-map;
+  }
+
+  .contacts__map-pin {
+    top: 140px;
+    left: 350px;
   }
 }
 
@@ -359,6 +375,11 @@
     width: 525px;
 
     background-color: @background-color-map;
+  }
+
+  .contacts__map-pin {
+    top: 145px;
+    left: 230px;
   }
 }
 

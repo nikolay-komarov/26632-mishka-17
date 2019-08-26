@@ -239,13 +239,12 @@
   fill: #62d1ba;
 }
 
-// ? не срабатывает!
-.order-form__type-input:active + .order-form__radio-btn-out {
+.order-form__type-name:active .order-form__radio-btn-out {
   stroke: #444444;
   opacity: 0.3;
 }
 
-.order-form__type-input:checked:active + .order-form__radio-btn-out {
+.order-form__type-name:checked:active .order-form__radio-btn-out {
   stroke: #444444;
   opacity: 0.3;
 }
@@ -502,6 +501,11 @@
     font-size: 17px;
     line-height: 18px;
     font-weight: 400;
+
+    // height: 50px;
+    // margin: 0;
+    // padding: 0;
+    // vertical-align: middle;
 
     color: @main-text-color;
 
