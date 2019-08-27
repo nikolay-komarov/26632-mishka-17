@@ -239,6 +239,13 @@
       </symbol></svg>
     </div>
 
+    <!-- символы для элементов попап-формы -->
+    <div style="display: none">
+      <svg><symbol id="btn-radio-size-border" viewBox="0 0 102 52">
+          <rect width="102" height="52"></rect>
+      </symbol></svg>
+      </div>
+
     <header class="page-header">
       <div class="page-header__wrapper">
         <a class="page-header__logo page-header__logo--main">
@@ -476,6 +483,46 @@
           <a href="#" class="contacts__write-us button">Напишите нам</a>
         </div>
       </section>
+
+      <section class="add-to-cart visually-hidden">
+        <form class="add-to-cart__form" >
+          <h2>
+            Добавить в корзину
+          </h2>
+          <h4>Выберите размер</h4>
+          <label class="add-to-cart__size">
+            <input class="add-to-cart__size-input" type="radio" name="add-to-cart-size" value="type-s" checked>
+            <svg class="btn-radio-size-border" width="102" height="52">
+              <use xlink:href="#btn-radio-size-border"></use>
+            </svg>
+              S
+          </label>
+          <label class="add-to-cart__size">
+            <input class="add-to-cart__size-input" type="radio" name="add-to-cart-size" value="type-m" checked>
+            <svg class="btn-radio-size-border" width="82" height="52">
+              <use xlink:href="#btn-radio-size-border"></use>
+            </svg>
+            M
+          </label>
+            <label class="add-to-cart__size">
+                <input class="add-to-cart__size-input" type="radio" name="add-to-cart-size" value="type-l" checked>
+                <!-- <svg class="order-form__radio-btn-out" width="52" height="52">
+                  <use xlink:href="#btn-radio-out"></use>
+                </svg> -->
+                  L
+              </label>
+
+
+            <!-- <input class="order-from__type-input visually-hidden" type="radio" name="order-form-type" value="type-accessory" checked>
+            <svg class="order-form__radio-btn-out" width="52" height="52">
+              <use xlink:href="#btn-radio-out"></use>
+            </svg> -->
+
+            <button class="add-to-cart__submit button" type="submit" >Добавить</button>
+
+        </form>
+      </section>
+
     </main>
 
     <footer class="page-footer">
