@@ -466,9 +466,10 @@
   display: block;
   box-sizing: border-box;
   width: 260px;
-  height: 50px;
+  // height: 50px;
   margin: 0;
-  padding: 0;
+  // padding: 0;
+  padding: 14px 0;
 
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 17px;
@@ -499,7 +500,8 @@
   &::placeholder {
     font-family: "OpenSans", "Arial", sans-serif;
     font-size: 17px;
-    line-height: 18px;
+    line-height: 1;
+    // line-height: 18px;
     font-weight: 400;
 
     // height: 50px;
@@ -523,12 +525,13 @@
     &:hover,
     &:focus,
     &:active {
+      box-sizing: border-box;
       border: 2px solid #62d1ba;
     }
   }
 
   &--description::placeholder {
-    padding: 0;
+    // padding: 0;
   }
 }
 
@@ -557,10 +560,11 @@
     flex-direction: row;
 
     justify-content: space-between;
+    align-items: center;
   }
 
   .order-form__user-label {
-    padding-top: 17px;
+    // padding-top: 17px;
     width: 125px;
   }
 
@@ -574,7 +578,8 @@
     padding-left: 20px;
 
     &::placeholder {
-      padding: 25px 0;
+      // padding: 0;
+      // padding: 25px 0;
     }
   }
 
@@ -608,10 +613,11 @@
     flex-direction: row;
 
     justify-content: space-between;
+    align-items: center;
   }
 
   .order-form__user-label {
-    padding-top: 17px;
+    // padding-top: 17px;
     width: 125px;
   }
 
@@ -624,7 +630,8 @@
     padding-left: 20px;
 
     &::placeholder {
-      padding: 25px 0;
+      // padding: 0;
+      // padding: 25px 0;
     }
   }
 
