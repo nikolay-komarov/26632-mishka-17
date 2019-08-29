@@ -404,6 +404,36 @@
         </div>
       </section>
 
+      <section class="add-to-cart">
+        <!-- visually-hidden -->
+        <div class="add-to-cart-wrapper">
+          <div class="add-to-cart__form">
+          <!-- <form class="add-to-cart__form" action="https://echo.htmlacademy.ru" method="post"> -->
+            <h2 class="add-to-cart__form-header">Добавить в корзину</h2>
+            <h4 class="add-to-cart__size-header">Выберите размер</h4>
+            <div class="add-to-cart__size-wrapper">
+              <ul class="add-to-cart__size-list">
+                <li class="add-to-cart__size-item">
+                  <input class="add-to-cart__size-item-input visually-hidden" id="add-to-cart-size-s" type="radio" name="add-to-cart-size" value="type-s" checked>
+                  <label class="add-to-cart__size-item-label" for="add-to-cart-size-s" >S</label>
+                </li>
+                <li class="add-to-cart__size-item">
+                  <input class="add-to-cart__size-item-input visually-hidden" id="add-to-cart-size-m" type="radio" name="add-to-cart-size" value="type-m">
+                  <label class="add-to-cart__size-item-label" for="add-to-cart-size-m" >M</label>
+                </li>
+                <li class="add-to-cart__size-item">
+                  <input class="add-to-cart__size-item-input visually-hidden" id="add-to-cart-size-l" type="radio" name="add-to-cart-size" value="type-l">
+                  <label class="add-to-cart__size-item-label" for="add-to-cart-size-l" >L</label>
+                </li>
+              </ul>
+            </div>
+            <!-- <button class="add-to-cart__submit button" type="submit" >Добавить</button> -->
+            <a href="#" class="add-to-cart__submit button">Добавить</a>
+          <!-- </form> -->
+            </div>
+        </div>
+      </section>
+
     </main>
 
     <footer class="page-footer">
@@ -466,6 +496,35 @@
           navMain.classList.remove('main-nav--opened');
         }
       });
+
+      var popup = document.querySelector(".add-to-cart-wrapper");
+      var popup_click = popup.querySelector(".add-to-cart__submit");
+      var btn_order = document.querySelector(".product-week__btn-order");
+      var btn_cart = document.querySelector(".catalog__to-cart-logo");
+
+      btn_order.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.add("add-to-cart-wrapper--show")
+      });
+
+      btn_cart.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.add("add-to-cart-wrapper--show")
+      })
+
+      popup_click.addEventListener("click", function (evt) {
+        popup.classList.remove("add-to-cart-wrapper--show");
+      });
+
+      window.addEventListener("keydown", function (evt) {
+        if (evt.keyCode === 27) {
+          evt.preventDefault ();
+          if (popup.classList.contains("add-to-cart-wrapper--show")) {
+            popup.classList.remove("add-to-cart-wrapper--show");
+          }
+        }
+      });
+
     </script>
 
   </body>
