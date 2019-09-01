@@ -20,7 +20,7 @@
     width: @tablet-width;
     padding: 0;
     padding-top: 62px;
-    padding-bottom: 5px;
+    padding-bottom: 7px;
   }
 }
 
@@ -28,7 +28,7 @@
   .contacts__wrapper {
     width: @desktop-width - 100px;
     padding: 0 50px;
-    padding-top: 70px;
+    padding-top: 60px;
     padding-bottom: 105px;
 
     flex-direction: row;
@@ -93,10 +93,11 @@
 
 @media (min-width: @desktop-width) {
   .contacts__header {
-    padding-top: 90px;
+    padding-top: 70px;
 
     font-size: 53px;
     line-height: 57px;
+    letter-spacing: -1.2px;
   }
 }
 
@@ -124,8 +125,8 @@
     display: block;
     position: absolute;
 
-    top: 75px;
-    left: 65px;
+    top: 61px;
+    left: 63px;
   }
 }
 
@@ -197,6 +198,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .contacts__item-wrapper {
+    padding-bottom: 30px;
+  }
+
   .contacts__item {
     width: 350px;
   }
@@ -289,6 +294,11 @@
   .contacts__item-value {
     width: 275px;
   }
+
+  .contacts__item-value--email {
+    width: 205px;
+    // margin-right: 30px;
+  }
 }
 
 /* блок с картой */
@@ -340,7 +350,7 @@
 
   position: absolute;
   top: 145px;
-  left: 139px;
+  left: 131px;
 }
 
 @media (min-width: @tablet-width) {
@@ -378,7 +388,7 @@
 
   .contacts__map-pin {
     top: 138px;
-    left: 362px;
+    left: 352px;
   }
 }
 
@@ -427,7 +437,7 @@
 .contacts__write-us {
   display: block;
   width: 260px;
-  margin: 37px auto;
+  margin: 38px auto;
 }
 
 @media (min-width: @tablet-width) {
