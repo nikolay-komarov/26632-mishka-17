@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="fonts/opensans.woff" rel="preload" as="fonts">
-    <link href="fonts/opensans.woff2" rel="preload" as="fonts">
-    <link href="fonts/opensansbold.woff" rel="preload" as="fonts">
-    <link href="fonts/opensansbold.woff2" rel="preload" as="fonts">
+    <link href="fonts/opensans.woff" rel="preload" as="font">
+    <link href="fonts/opensans.woff2" rel="preload" as="font">
+    <link href="fonts/opensansbold.woff" rel="preload" as="font">
+    <link href="fonts/opensansbold.woff2" rel="preload" as="font">
     <link href="css/style.min.css" rel="stylesheet">
 
     <!-- Контуры блоков (временно!) -->
@@ -96,11 +96,13 @@
               <li class="site-list__item site-list__item--delivery">
                 <a class="site-list__item-link" href="#"><p class="site-list__item-link-header">Бесплатная доставка по России</p></a>
               </li>
-              <li class="site-list__item site-list__item--new">
+              <li class="site-list__item site-list__item--sale">
                 <a class="site-list__item-link" href="#"><p class="site-list__item-link-header">Распродажа</p></a>
               </li>
-              <li class="site-list__item site-list__item--sale">
+              <li class="site-list__item site-list__item--new">
                 <a class="site-list__item-link" href="#"><p class="site-list__item-link-header">Новые поступления</p></a>
+              </li>
+              <li class="site-list__item site-list__item--logo-wrapper">
               </li>
             </ul>
           </div>
@@ -118,6 +120,10 @@
             <li class="catalog__item">
               <a href="#" class="catalog__item-img-link">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.webp 1x, img/photo-hare-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.webp 1x, img/photo-hare-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-hare-mobile@1x.webp 1x, img/photo-hare-mobile@2x.webp 2x">
+
                   <source media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
                   <img class="catalog__item-img" src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x" width="260" height="195" alt="Карточка товара">
@@ -143,6 +149,10 @@
             <li class="catalog__item">
               <a href="#" class="catalog__item-img-link">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.webp 1x, img/photo-bowl-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.webp 1x, img/photo-bowl-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-bowl-mobile@1x.webp 1x, img/photo-bowl-mobile@2x.webp 2x">
+
                   <source media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
                   <img class="catalog__item-img" src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" width="260" height="195" alt="Карточка товара">
@@ -168,6 +178,10 @@
             <li class="catalog__item">
               <a href="#" class="catalog__item-img-link">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.webp 1x, img/photo-toys-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.webp 1x, img/photo-toys-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-toys-mobile@1x.webp 1x, img/photo-toys-mobile@2x.webp 2x">
+
                   <source media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@2x.jpg 2x">
                   <img class="catalog__item-img" src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x" width="260" height="195" alt="Карточка товара">
@@ -199,6 +213,10 @@
           <div class="produce-flow__wrapper-inner">
             <div class="produce-flow__img-wrapper">
               <picture>
+                <source type="image/webp" media="(min-width: 1150px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
+
                 <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
                 <img class="produce-flow__img" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" width="260" height="150" alt="Процесс производства">
@@ -226,30 +244,30 @@
       <section class="add-to-cart">
         <!-- visually-hidden -->
         <div class="add-to-cart-wrapper">
-          <div class="add-to-cart__form">
-          <!-- <form class="add-to-cart__form" action="https://echo.htmlacademy.ru" method="post"> -->
+          <!-- <div class="add-to-cart__form"> -->
+          <form class="add-to-cart__form" action="https://echo.htmlacademy.ru" method="post">
             <h2 class="add-to-cart__form-header">Добавить в корзину</h2>
             <h4 class="add-to-cart__size-header">Выберите размер</h4>
             <div class="add-to-cart__size-wrapper">
               <ul class="add-to-cart__size-list">
                 <li class="add-to-cart__size-item">
                   <input class="add-to-cart__size-item-input visually-hidden" id="add-to-cart-size-s" type="radio" name="add-to-cart-size" value="type-s" checked>
-                  <label class="add-to-cart__size-item-label" for="add-to-cart-size-s">S</label>
+                  <label class="add-to-cart__size-item-label" for="add-to-cart-size-s" >S</label>
                 </li>
                 <li class="add-to-cart__size-item">
                   <input class="add-to-cart__size-item-input visually-hidden" id="add-to-cart-size-m" type="radio" name="add-to-cart-size" value="type-m">
-                  <label class="add-to-cart__size-item-label" for="add-to-cart-size-m">M</label>
+                  <label class="add-to-cart__size-item-label" for="add-to-cart-size-m" >M</label>
                 </li>
                 <li class="add-to-cart__size-item">
                   <input class="add-to-cart__size-item-input visually-hidden" id="add-to-cart-size-l" type="radio" name="add-to-cart-size" value="type-l">
-                  <label class="add-to-cart__size-item-label" for="add-to-cart-size-l">L</label>
+                  <label class="add-to-cart__size-item-label" for="add-to-cart-size-l" >L</label>
                 </li>
               </ul>
             </div>
-            <!-- <button class="add-to-cart__submit button" type="submit" >Добавить</button> -->
-            <a href="#" class="add-to-cart__submit button">Добавить</a>
-          <!-- </form> -->
-            </div>
+            <button class="add-to-cart__submit button" type="submit" >Добавить</button>
+            <!-- <a href="#" class="add-to-cart__submit button">Добавить</a> -->
+          </form>
+          <!-- </div> -->
         </div>
       </section>
 
@@ -316,14 +334,14 @@
         }
       });
 
-      // var popup = document.querySelector(".add-to-cart-wrapper");
-      // var popup_click = popup.querySelector(".add-to-cart__submit");
+      var popup = document.querySelector(".add-to-cart-wrapper");
+      var popup_click = popup.querySelector(".add-to-cart__submit");
       // var btn_order = document.querySelector(".product-week__btn-order");
       // var btn_cart = document.querySelector(".catalog__to-cart-logo");
 
       // btn_order.addEventListener("click", function (evt) {
       //   evt.preventDefault();
-      //   popup.classList.add("add-to-cart-wrapper--show")
+      //   popup.classList.add("add-to-cart-wrapper--show");
       // });
 
       // btn_cart.addEventListener("click", function (evt) {
@@ -331,18 +349,28 @@
       //   popup.classList.add("add-to-cart-wrapper--show")
       // })
 
-      // popup_click.addEventListener("click", function (evt) {
-      //   popup.classList.remove("add-to-cart-wrapper--show");
-      // });
+      popup_click.addEventListener("click", function (evt) {
+        popup.classList.remove("add-to-cart-wrapper--show");
+      });
 
-      // window.addEventListener("keydown", function (evt) {
-      //   if (evt.keyCode === 27) {
-      //     evt.preventDefault ();
-      //     if (popup.classList.contains("add-to-cart-wrapper--show")) {
-      //       popup.classList.remove("add-to-cart-wrapper--show");
-      //     }
-      //   }
-      // });
+      window.addEventListener("keydown", function (evt) {
+        if (evt.keyCode === 27) {
+          evt.preventDefault ();
+          if (popup.classList.contains("add-to-cart-wrapper--show")) {
+            popup.classList.remove("add-to-cart-wrapper--show");
+          }
+        }
+      });
+
+      var allCartButtonts = document.querySelectorAll(".catalog__to-cart-logo");
+
+      for (let j = 0; j < allCartButtonts.length; j++) {
+        let cartButton = allCartButtonts[j];
+        cartButton.addEventListener("click", function (evt) {
+          evt.preventDefault();
+          popup.classList.add("add-to-cart-wrapper--show");
+        });
+      };
 
     </script>
 

@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="fonts/opensans.woff" rel="preload" as="fonts">
-    <link href="fonts/opensans.woff2" rel="preload" as="fonts">
-    <link href="fonts/opensansbold.woff" rel="preload" as="fonts">
-    <link href="fonts/opensansbold.woff2" rel="preload" as="fonts">
+    <link href="fonts/opensans.woff" rel="preload" as="font">
+    <link href="fonts/opensans.woff2" rel="preload" as="font">
+    <link href="fonts/opensansbold.woff" rel="preload" as="font">
+    <link href="fonts/opensansbold.woff2" rel="preload" as="font">
     <link href="css/style.min.css" rel="stylesheet">
 
     <!-- Контуры блоков (временно!) -->
@@ -96,11 +96,13 @@
               <li class="site-list__item site-list__item--delivery">
                 <a class="site-list__item-link" href="#"><p class="site-list__item-link-header">Бесплатная доставка по России</p></a>
               </li>
-              <li class="site-list__item site-list__item--new">
+              <li class="site-list__item site-list__item--sale">
                 <a class="site-list__item-link" href="#"><p class="site-list__item-link-header">Распродажа</p></a>
               </li>
-              <li class="site-list__item site-list__item--sale">
+              <li class="site-list__item site-list__item--new">
                 <a class="site-list__item-link" href="#"><p class="site-list__item-link-header">Новые поступления</p></a>
+              </li>
+              <li class="site-list__item site-list__item--logo-wrapper">
               </li>
             </ul>
           </div>
@@ -173,6 +175,10 @@
             </div>
 
             <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
+
               <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
               <img class="product-week__img" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Вязаные корзинки">
