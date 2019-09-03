@@ -13,15 +13,15 @@
   margin: 0 auto;
   padding: 0 30px;
   padding-top: 30px;
-  padding-bottom: 25px;
+  padding-bottom: 15px;
 }
 
 @media (min-width: @tablet-width) {
   .about-us__wrapper {
     width: @tablet-width - 100px;
     padding: 0 50px;
-    padding-top: 65px;
-    padding-bottom: 85px;
+    padding-top: 40px;
+    padding-bottom: 5px;
   }
 }
 
@@ -29,8 +29,8 @@
   .about-us__wrapper {
     width: @desktop-width - 450px;
     padding: 0 225px;
-    padding-top: 80px;
-    padding-bottom: 90px;
+    padding-top: 55px;
+    // padding-bottom: 90px;
   }
 }
 
@@ -54,17 +54,18 @@
 @media (min-width: @tablet-width) {
   .about-us__header {
     width: 335px;
-    padding-bottom: 55px;
+    padding-bottom: 45px;
 
     font-size: 43px;
     line-height: 50px;
+    letter-spacing: -0.7px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .about-us__header {
     width: 525px;
-    padding-bottom: 55px;
+    padding-bottom: 45px;
 
     font-size: 53px;
     line-height: 57px;
@@ -121,11 +122,12 @@
   margin: 0;
   padding: 0;
   padding-top: 55px;
-  padding-bottom: 30px;
+  padding-bottom: 28px;
 
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 17px;
   line-height: 20px;
+  letter-spacing: 0.2px;
   font-weight: 700;
 
   color: @header-color;
@@ -134,18 +136,53 @@
 
   position: relative;
 
-  svg {
+  .about-us__item-svg {
     position: absolute;
     top: 0;
     left: 0;
 
     fill: #63d1bb;
+
+    &--eko {
+      top: 2px;
+      left: 8px;
+    }
+
+    &--price {
+      top: 2px;
+    }
+
+    &--like {
+      top: 6px;
+      left: 8px;
+    }
+
+    &--clew {
+      top: 3px;
+      left: 5px;
+    }
+
+    &--rocket {
+      top: 5px;
+      left: -4px;
+    }
+
+    &--box {
+      top: 3px;
+      left: 3px;
+    }
+  }
+
+  &:last-child {
+    padding-bottom: 0;
   }
 }
+
 
 @media (min-width: @tablet-width) {
   .about-us__item {
     width: 333px;
+    padding-bottom: 58px;
 
     font-size: 20px;
     line-height: 22px;

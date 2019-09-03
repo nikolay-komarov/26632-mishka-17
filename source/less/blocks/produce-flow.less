@@ -7,14 +7,28 @@
 }
 
 .produce-flow__wrapper {
-  display: flex;
   width: 260px;
   margin: 0 auto;
   padding: 0 30px;
+
+  background-color: @background-color-main;
+}
+
+.produce-flow__wrapper-inner {
+  display: flex;
+  width: 260px;
+  margin: 0;
+  padding: 0;
   flex-direction: column;
   align-items: flex-start;
 
   background-color: @background-color-main;
+
+  box-sizing: border-box;
+  border: 1px solid #ececec;
+  box-shadow: 0 0 1px 0 #ececec;
+
+  margin-bottom: 57px;
 
   position: relative;
 }
@@ -24,7 +38,13 @@
     width: @tablet-width - 100px;
     margin: 0 auto;
     padding: 0 50px;
-    padding-bottom: 70px;
+    padding-bottom: 65px;
+  }
+
+  .produce-flow__wrapper-inner {
+    width: @tablet-width - 100px;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -33,7 +53,13 @@
     width: @desktop-width - 100px;
     margin: 0 auto;
     padding: 0 50px;
-    padding-bottom: 110px;
+    padding-bottom: 102px;
+  }
+
+  .produce-flow__wrapper-inner {
+    width: @desktop-width - 100px;
+    margin: 0;
+    padding: 0;
 
     flex-direction: row;
     justify-content: space-between;
@@ -43,16 +69,20 @@
 
 .produce-flow__content-wrapper {
   display: flex;
-  width: 260px;
+  width: 258px;
   margin: 0 auto;
   padding: 0;
+  padding-bottom: 8px;
+
   flex-direction: column;
   align-items: flex-start;
+
+  position: relative;
 }
 
 @media (min-width: @tablet-width) {
   .produce-flow__content-wrapper {
-    width: @tablet-width - 100px;
+    width: @tablet-width - 102px;
     margin: 0;
     padding: 0;
   }
@@ -68,12 +98,12 @@
 
 .produce-flow__header {
   display: block;
-  width: 260px;
+  width: 258px;
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0;
-  padding-top: 30px;
-  padding-bottom: 30px + 150px; // для вставки видео
+  padding-top: 25px;
+  padding-bottom: 172px; // 30px + 150px; // для вставки видео
   padding-left: 90px;
 
   font-family: "OpenSans", "Arial", sans-serif;
@@ -86,14 +116,29 @@
   background-color: @background-color-main;
 }
 
+.produce-flow__header-icon {
+  position: absolute;
+  top: 30px;
+  left: 34px;
+
+  fill: #63d1bb;
+}
+
 @media (min-width: @tablet-width) {
   .produce-flow__header {
-    width: @tablet-width - 100px;
-    padding-bottom: 30px;
+    width: @tablet-width - 102px;
+    padding-bottom: 32px;
     padding-left: 105px;
+    padding-top: 35px;
 
     font-size: 20px;
     line-height: 24px;
+    letter-spacing: 0.2px;
+  }
+
+  .produce-flow__header-icon {
+    top: 30px;
+    left: 40px;
   }
 }
 
@@ -102,7 +147,12 @@
     width: 100%;
     padding: 0;
     padding-top: 95px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
+  }
+
+  .produce-flow__header-icon {
+    top: 40px;
+    left: 60px;
   }
 }
 
@@ -111,11 +161,33 @@
   padding: 0;
 
   position: absolute;
-  top: 108px;
-  left: 30px;
+  top: 95px;
+  left: 0;
+
+  line-height: 0;
+  font-size: 0;
 
   background-color: #ececec;
+
+  z-index: 2;
 }
+
+.produce-flow__img-play-icon {
+  position: absolute;
+  top: 38px; // (154px / 2) - (101px / 2);
+  left: 80px; // (260px / 2) - (77px / 2);
+}
+
+.produce-flow__img-play-icon:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.produce-flow__img-play-icon:active {
+  transform: scale(0.8);
+  cursor: pointer;
+}
+
 
 @media (min-width: @tablet-width) {
   .produce-flow__img-wrapper {
@@ -123,10 +195,15 @@
     top: 0;
     left: 0;
 
-    width: @tablet-width - 100px;
+    width: @tablet-width - 100px - 2px;
     height: 455px;
     margin: 0 auto;
     padding: 0;
+  }
+
+  .produce-flow__img-play-icon {
+    top: 185px;
+    left: 285px;
   }
 }
 
@@ -136,17 +213,25 @@
     height: 455px;
     margin: 0;
     padding: 0;
+
+    font-size: 0;
+    line-height: 0;
+  }
+
+  .produce-flow__img-play-icon {
+    top: 185px;
+    left: 290px;
   }
 }
 
 
 .produce-flow__text {
   display: block;
-  width: 190px;
+  width: 258px - 35px - 40px;
   margin: 0 auto;
   padding: 0;
-  padding-top: 35px;
-  padding-left: 30px;
+  padding-top: 28px;
+  padding-left: 35px;
   padding-right: 40px;
 
   font-family: "OpenSans", "Arial", sans-serif;
@@ -161,7 +246,7 @@
 
 @media (min-width: @tablet-width) {
   .produce-flow__text {
-    width: @tablet-width - 100px - 80px;
+    width: @tablet-width - 100px - 80px - 2px;
     padding: 0 40px;
 
     font-size: 15px;
@@ -179,13 +264,15 @@
 
 .produce-flow__order {
   width: 192px;
-  margin: 30px auto;
+  margin: 25px auto;
+  letter-spacing: -0.5px;
 }
 
 @media (min-width: @tablet-width) {
   .produce-flow__order {
     width: @tablet-width - 100px - 80px;
-    margin: 45px auto;
+    margin: 35px auto;
+    margin-bottom: 45px;
   }
 }
 

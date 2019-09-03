@@ -16,6 +16,12 @@
   background-color: @background-color-footer;
 }
 
+.page-footer__social {
+  margin: 0;
+  padding: 0;
+  padding-top: 3px;
+}
+
 @media (min-width: @tablet-width) {
   .page-footer__wrapper {
     width: @tablet-width;
@@ -23,7 +29,7 @@
     justify-content: space-between;
     align-items: center;
 
-    min-height: 144px; // временно
+    // min-height: 144px; // временно
   }
 }
 
@@ -31,7 +37,7 @@
   .page-footer__wrapper {
     width: @desktop-width;
 
-    min-height: 144px; // временно
+    // min-height: 144px; // временно
   }
 }
 
@@ -49,8 +55,14 @@
     margin: 0;
     padding: 0;
     padding-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 58px;
   }
 }
+
+// @media (min-width: @deskto-width) {
+
+// }
 
 .page-footer__logo {
   width: 102px;
