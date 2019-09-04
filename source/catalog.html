@@ -10,49 +10,9 @@
     <link href="fonts/opensansbold.woff2" rel="preload" as="font">
     <link href="css/style.min.css" rel="stylesheet">
 
-    <!-- Контуры блоков (временно!) -->
-    <!--
-    <style>
-      /*
-      body {
-        background-color: lightgrey;
-      }
-      */
-      body > * {
-        outline: 2px solid blue;
-      }
-      body > * > * {
-        outline: 2px solid green;
-      }
-      body > * > * > * {
-        outline: 2px solid red;
-      }
-      body > * > * > * > * {
-        outline: 2px solid purple;
-      }
-      body > * > * > * > * > * {
-        outline: 2px solid orangered;
-      }
-      body > * > * > * > * > * > * {
-        outline: 2px solid greenyellow;
-      }
-      body > * > * > * > * > * > * > * {
-        outline: 2px solid lightblue;
-      }
-      body > * > * > * > * > * > * > * > *{
-        outline: 1px dotted red;
-      }
-      body > * > * > * > * > * > * > * > * > * {
-        outline: 1px dotted green;
-      }
-    </style>
-    -->
-
     <script src="js/picturefill.js"></script>
-
   </head>
   <body>
-
     <!-- подключение спрайта -->
     <div style="display: none">
       <include src="build/img/sprite.svg"></include>
@@ -242,9 +202,7 @@
       </section>
 
       <section class="add-to-cart">
-        <!-- visually-hidden -->
         <div class="add-to-cart-wrapper">
-          <!-- <div class="add-to-cart__form"> -->
           <form class="add-to-cart__form" action="https://echo.htmlacademy.ru" method="post">
             <h2 class="add-to-cart__form-header">Добавить в корзину</h2>
             <h4 class="add-to-cart__size-header">Выберите размер</h4>
@@ -265,12 +223,9 @@
               </ul>
             </div>
             <button class="add-to-cart__submit button" type="submit" >Добавить</button>
-            <!-- <a href="#" class="add-to-cart__submit button">Добавить</a> -->
           </form>
-          <!-- </div> -->
         </div>
       </section>
-
     </main>
 
     <footer class="page-footer">
@@ -319,35 +274,23 @@
     </footer>
 
     <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
+      var navMain = document.querySelector(".main-nav");
+      var navToggle = document.querySelector(".main-nav__toggle");
 
-      navMain.classList.remove('main-nav--nojs');
+      navMain.classList.remove("main-nav--nojs");
 
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
+      navToggle.addEventListener("click", function() {
+        if (navMain.classList.contains("main-nav--closed")) {
+          navMain.classList.remove("main-nav--closed");
+          navMain.classList.add("main-nav--opened");
         } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
+          navMain.classList.add("main-nav--closed");
+          navMain.classList.remove("main-nav--opened");
         }
       });
 
       var popup = document.querySelector(".add-to-cart-wrapper");
       var popup_click = popup.querySelector(".add-to-cart__submit");
-      // var btn_order = document.querySelector(".product-week__btn-order");
-      // var btn_cart = document.querySelector(".catalog__to-cart-logo");
-
-      // btn_order.addEventListener("click", function (evt) {
-      //   evt.preventDefault();
-      //   popup.classList.add("add-to-cart-wrapper--show");
-      // });
-
-      // btn_cart.addEventListener("click", function (evt) {
-      //   evt.preventDefault();
-      //   popup.classList.add("add-to-cart-wrapper--show")
-      // })
 
       popup_click.addEventListener("click", function (evt) {
         popup.classList.remove("add-to-cart-wrapper--show");
@@ -371,8 +314,6 @@
           popup.classList.add("add-to-cart-wrapper--show");
         });
       };
-
     </script>
-
   </body>
 </html>

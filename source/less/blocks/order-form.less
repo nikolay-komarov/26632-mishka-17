@@ -142,7 +142,7 @@
   display: block;
   margin: 0 auto;
   padding: 0;
-  padding-bottom: 30px;
+  padding-bottom: 33px;
 
   background-color: @background-color-main;
 }
@@ -222,7 +222,7 @@
 
 // радио-кнопки
 
-.order-from__type-input {
+.order-form__type-input {
   appearance: none;
 }
 
@@ -257,12 +257,12 @@
   fill: transparent;
 }
 
-.order-from__type-input:hover + .order-form__radio-btn-out,
-.order-from__type-input:focus + .order-form__radio-btn-out {
+.order-form__type-input:hover + .order-form__radio-btn-out,
+.order-form__type-input:focus + .order-form__radio-btn-out {
   stroke: #62d1ba;
 }
 
-.order-from__type-input:checked ~ .order-form__radio-btn-in {
+.order-form__type-input:checked ~ .order-form__radio-btn-in {
   fill: #62d1ba;
 }
 
@@ -283,7 +283,7 @@
   display: block;
   margin: 0 auto;
   padding: 0;
-  padding-bottom: 10px;
+  padding-bottom: 13px;
 
   background-color: @background-color-main;
 }
@@ -496,7 +496,7 @@
 .order-form__user-name-group-inner-wrapper {
   display: flex;
   flex-direction: column;
-  padding-bottom: 25px;
+  padding-bottom: 20px;
 }
 
 .order-form__user-label {
@@ -538,9 +538,7 @@
   display: block;
   box-sizing: border-box;
   width: 260px;
-  // height: 50px;
   margin: 0;
-  // padding: 0;
   padding: 14px 0;
 
   font-family: "OpenSans", "Arial", sans-serif;
@@ -575,13 +573,7 @@
     font-family: "OpenSans", "Arial", sans-serif;
     font-size: 17px;
     line-height: 1;
-    // line-height: 18px;
     font-weight: 400;
-
-    // height: 50px;
-    // margin: 0;
-    // padding: 0;
-    // vertical-align: middle;
 
     color: @main-text-color;
 
@@ -603,10 +595,6 @@
       border: 2px solid #62d1ba;
     }
   }
-  //
-  // &--description::placeholder {
-  //   // padding: 0;
-  // }
 }
 
 @media (min-width: @tablet-width) {
@@ -635,14 +623,13 @@
     display: flex;
     flex-direction: row;
 
-    padding-bottom: 26px;
+    padding-bottom: 20px;
 
     justify-content: space-between;
     align-items: center;
   }
 
   .order-form__user-label {
-    // padding-top: 17px;
     width: 125px;
 
     letter-spacing: 1.5px;
@@ -658,11 +645,6 @@
     padding-left: 17px;
 
     letter-spacing: 1.2px;
-    //
-    // &::placeholder {
-    //   // padding: 0;
-    //   // padding: 25px 0;
-    // }
   }
 
   .order-form__input--name {
@@ -699,7 +681,6 @@
   }
 
   .order-form__user-label {
-    // padding-top: 17px;
     width: 125px;
   }
 
@@ -710,11 +691,6 @@
   .order-form__input {
     width: 575px;
     padding-left: 20px;
-    //
-    // &::placeholder {
-    //   // padding: 0;
-    //   // padding: 25px 0;
-    // }
   }
 
   .order-form__input--name {
@@ -744,7 +720,7 @@
 }
 
 .order-form__user-contacts {
-  padding-bottom: 33px;
+  padding-bottom: 30px;
   position: relative;
 }
 
@@ -761,7 +737,7 @@
     top: 33px; // 16px + 25px + 15px;
 
     width: 32px;
-    height: 31px; // ?
+    height: 31px;
   }
 
   fill: #000000;
@@ -795,7 +771,7 @@
     display: flex;
     flex-direction: row;
 
-    padding-bottom: 25px;
+    padding-bottom: 20px;
   }
 
   .order-form__header-group--phone,
